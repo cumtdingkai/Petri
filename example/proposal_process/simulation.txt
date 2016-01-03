@@ -1,0 +1,7 @@
+right.
+the original activity has problem in simulation,
+because, the action "Communicate with customer to obtain missing information" goes to final node.
+see:
+t_activityDiagrams_fig6.gif
+http://www.ibm.com/developerworks/rational/library/2802.html
+http://www.informatik.fb2.frankfurt-university.de/~bartuss/rup/process/modguide/md_bactd.htm

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<model n_steps="None" name="EA_Activity1" version="3.0">
+    <element name="update_shopping_cart"/>
+    <control_flow from="update_shopping_cart" prob="0.333333333333" to="view_shopping_cart"/>
+    <control_flow from="update_shopping_cart" prob="0.333333333333" to="Browse_items"/>
+    <control_flow from="update_shopping_cart" prob="0.333333333333" to="search_items"/>
+    <element initial="true" name="ActivityInitial"/>
+    <control_flow from="ActivityInitial" prob="0.5" to="Browse_items"/>
+    <control_flow from="ActivityInitial" prob="0.5" to="search_items"/>
+    <element name="add_to_shopping_cart"/>
+    <control_flow from="add_to_shopping_cart" prob="0.333333333333" to="view_shopping_cart"/>
+    <control_flow from="add_to_shopping_cart" prob="0.333333333333" to="Browse_items"/>
+    <control_flow from="add_to_shopping_cart" prob="0.333333333333" to="search_items"/>
+    <element name="view_item"/>
+    <control_flow from="view_item" prob="0.333333333333" to="search_items"/>
+    <control_flow from="view_item" prob="0.333333333333" to="add_to_shopping_cart"/>
+    <control_flow from="view_item" prob="0.333333333333" to="Browse_items"/>
+    <element name="view_shopping_cart"/>
+    <control_flow from="view_shopping_cart" prob="0.25" to="update_shopping_cart"/>
+    <control_flow from="view_shopping_cart" prob="0.25" to="checkout"/>
+    <control_flow from="view_shopping_cart" prob="0.25" to="Browse_items"/>
+    <control_flow from="view_shopping_cart" prob="0.25" to="search_items"/>
+    <element name="Browse_items"/>
+    <control_flow from="Browse_items" prob="1.0" to="view_item"/>
+    <element name="ActivityFinal"/>
+    <element name="checkout"/>
+    <control_flow from="checkout" prob="1.0" to="ActivityFinal"/>
+    <element name="search_items"/>
+    <control_flow from="search_items" prob="0.333333333333" to="Browse_items"/>
+    <control_flow from="search_items" prob="0.333333333333" to="search_items"/>
+    <control_flow from="search_items" prob="0.333333333333" to="view_item"/>
+</model>

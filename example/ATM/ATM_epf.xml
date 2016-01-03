@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<model n_steps="None" name="ATM" version="3.0">
+    <element name="Get_Option"/>
+    <control_flow from="Get_Option" prob="0.5" to="Transfer"/>
+    <control_flow from="Get_Option" prob="0.5" to="Withdrawal"/>
+    <element name="Display(&quot;Insert_PID&quot;)"/>
+    <control_flow from="Display(&quot;Insert_PID&quot;)" prob="1" to="PID_Validation"/>
+    <element name="parallel1"/>
+    <control_flow from="parallel1" prob="1" to="node3"/>
+    <element name="Transfer"/>
+    <control_flow from="Transfer" prob="1" to="node3"/>
+    <element initial="true" name="node4"/>
+    <control_flow from="node4" prob="1" to="Insert_Card"/>
+    <element host="parallel1" initial="true" name="Eject_Card"/>
+    <element name="Card_Validation"/>
+    <control_flow from="Card_Validation" prob="0.5" to="parallel1"/>
+    <control_flow from="Card_Validation" prob="0.5" to="Display(&quot;Insert_PID&quot;)"/>
+    <element name="Display(&quot;PID_not_valid.Try_again&quot;)"/>
+    <control_flow from="Display(&quot;PID_not_valid.Try_again&quot;)" prob="1" to="Display(&quot;Insert_PID&quot;)"/>
+    <element name="Withdrawal"/>
+    <control_flow from="Withdrawal" prob="1" to="node3"/>
+    <element name="PID_Validation"/>
+    <control_flow from="PID_Validation" prob="0.5" to="Display(&quot;PID_not_valid.Try_again&quot;)"/>
+    <control_flow from="PID_Validation" prob="0.5" to="Get_Option"/>
+    <element name="node3"/>
+    <element host="parallel1" initial="true" name="Display(&quot;Card_not_valid&quot;)"/>
+    <element name="Insert_Card"/>
+    <control_flow from="Insert_Card" prob="1" to="Card_Validation"/>
+    <subsystem name="parallel1" parallel="true"/>
+</model>

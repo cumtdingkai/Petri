@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<model n_steps="None" name="Ohne Titel1" version="3.0">
+    <element name="Identify_issue"/>
+    <control_flow from="Identify_issue" prob="0.5" to="Update_ticket"/>
+    <control_flow from="Identify_issue" prob="0.5" to="Determine_resolution"/>
+    <element name="Determine_resolution"/>
+    <control_flow from="Determine_resolution" prob="1.0" to="Fix_Issue"/>
+    <element name="Fix_Issue"/>
+    <control_flow from="Fix_Issue" prob="1.0" to="Verify_Fix"/>
+    <element name="Close_ticket"/>
+    <control_flow from="Close_ticket" prob="1.0" to="node1"/>
+    <element name="Update_ticket"/>
+    <control_flow from="Update_ticket" prob="1.0" to="Reproduce_issue"/>
+    <element name="node1"/>
+    <element name="Verify_Fix"/>
+    <control_flow from="Verify_Fix" prob="0.5" to="Identify_issue"/>
+    <control_flow from="Verify_Fix" prob="0.5" to="Close_ticket"/>
+    <element name="Reproduce_issue"/>
+    <control_flow from="Reproduce_issue" prob="0.5" to="Update_ticket"/>
+    <control_flow from="Reproduce_issue" prob="0.5" to="Identify_issue"/>
+    <element initial="true" name="node2"/>
+    <control_flow from="node2" prob="1.0" to="Create_ticket"/>
+    <element name="Create_ticket"/>
+    <control_flow from="Create_ticket" prob="1.0" to="Reproduce_issue"/>
+</model>

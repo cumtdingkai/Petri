@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<model n_steps="None" name="rent_video" version="3.0">
+    <element name="Create_Rent_Transaction"/>
+    <control_flow from="Create_Rent_Transaction" prob="1" to="Accept_Payment"/>
+    <element host="parallel1" initial="true" name="Scan_Videos"/>
+    <element name="Request_Deposit"/>
+    <control_flow from="Request_Deposit" prob="1" to="Create_Rent_Transaction"/>
+    <element name="parallel2"/>
+    <control_flow from="parallel2" prob="1" to="Commit_Rent_Transaction"/>
+    <element name="Verify_Customer"/>
+    <control_flow from="Verify_Customer" prob="0.333333333333" to="node7"/>
+    <control_flow from="Verify_Customer" prob="0.333333333333" to="Request_Deposit"/>
+    <control_flow from="Verify_Customer" prob="0.333333333333" to="Create_Rent_Transaction"/>
+    <element name="parallel1"/>
+    <control_flow from="parallel1" prob="1" to="Verify_Customer"/>
+    <element host="parallel2" initial="true" name="Update_Stock"/>
+    <element initial="true" name="node8"/>
+    <control_flow from="node8" prob="1" to="parallel1"/>
+    <element host="parallel1" initial="true" name="Scan_Card"/>
+    <element name="Accept_Payment"/>
+    <control_flow from="Accept_Payment" prob="0.333333333333" to="node1"/>
+    <control_flow from="Accept_Payment" prob="0.333333333333" to="Accept_Payment"/>
+    <control_flow from="Accept_Payment" prob="0.333333333333" to="parallel2"/>
+    <element name="node1"/>
+    <element host="parallel2" initial="true" name="Print_Receipt"/>
+    <element name="node6"/>
+    <element name="node7"/>
+    <element name="Commit_Rent_Transaction"/>
+    <control_flow from="Commit_Rent_Transaction" prob="1" to="node6"/>
+    <subsystem name="parallel2" parallel="true"/>
+    <subsystem name="parallel1" parallel="true"/>
+</model>

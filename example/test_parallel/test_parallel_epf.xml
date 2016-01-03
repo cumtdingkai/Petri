@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<model n_steps="None" name="test_parallel" version="3.0">
+    <element name="C"/>
+    <control_flow from="C" prob="1" to="parallel1"/>
+    <element name="parallel1"/>
+    <control_flow from="parallel1" prob="0.7" to="J"/>
+    <control_flow from="parallel1" prob="0.3" to="parallel1"/>
+    <element name="J"/>
+    <control_flow from="J" prob="1" to="node1"/>
+    <element initial="true" name="init"/>
+    <control_flow from="init" prob="1" to="C"/>
+    <element host="parallel1" initial="true" name="A1"/>
+    <control_flow from="A1" prob="0.5" to="A3"/>
+    <control_flow from="A1" prob="0.5" to="A2"/>
+    <data_flow from="A1" to="O1"/>
+    <element host="parallel1" name="A3"/>
+    <control_flow from="A3" prob="1" to="A4"/>
+    <element host="parallel1" name="A2"/>
+    <control_flow from="A2" prob="1" to="A4"/>
+    <element host="parallel1" initial="true" name="A5"/>
+    <control_flow from="A5" prob="1" to="A6"/>
+    <data_flow from="A5" to="O2"/>
+    <element host="parallel1" name="A4"/>
+    <element host="parallel1" name="A6"/>
+    <data_flow from="A6" to="O3"/>
+    <data_flow from="O1" to="A6"/>
+    <data_flow from="O2" to="A6"/>
+    <element name="node1"/>
+    <data host="parallel1" name="O3"/>
+    <data host="parallel1" name="O2"/>
+    <data host="parallel1" name="O1"/>
+    <subsystem name="parallel1" parallel="true"/>
+</model>

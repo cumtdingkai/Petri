@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<model n_steps="None" name="customer" version="3.0">
+    <element name="Confirm_the_order"/>
+    <control_flow from="Confirm_the_order" prob="1.0" to="Dispatch_the_order"/>
+    <element name="Order_request_system_confirms_the_receipt_of_the_order"/>
+    <control_flow from="Order_request_system_confirms_the_receipt_of_the_order" prob="0.5" to="Confirm_the_order"/>
+    <control_flow from="Order_request_system_confirms_the_receipt_of_the_order" prob="0.5" to="node2"/>
+    <element name="Dispatch_the_order"/>
+    <control_flow from="Dispatch_the_order" prob="1.0" to="node3"/>
+    <element name="Customer_sends_an_order_request"/>
+    <control_flow from="Customer_sends_an_order_request" prob="1.0" to="Order_request_system_confirms_the_receipt_of_the_order"/>
+    <element initial="true" name="node1"/>
+    <control_flow from="node1" prob="1.0" to="Customer_sends_an_order_request"/>
+    <element name="node3"/>
+    <element name="node2"/>
+</model>

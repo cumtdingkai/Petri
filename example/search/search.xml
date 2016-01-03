@@ -1,0 +1,1262 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<xmi:XMI xmi:version="2.1" xmlns:uml="http://schema.omg.org/spec/UML/2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1">
+	<xmi:Documentation exporter="Enterprise Architect" exporterVersion="6.5"/>
+	<uml:Model xmi:type="uml:Model" name="EA_Model" visibility="public">
+		<packagedElement xmi:type="uml:Package" xmi:id="EAPK_9BA197BB_8CBD_464f_9124_2404A24AAE41" name="Model" visibility="public">
+			<packagedElement xmi:type="uml:Package" xmi:id="EAPK_6B79AB4D_B42B_4caf_8224_380B954D5A3F" name="search" visibility="public">
+				<packagedElement xmi:type="uml:Activity" xmi:id="EAID_AC000001_B42B_4caf_8224_380B954D5A3F" name="EA_Activity1" visibility="public">
+					<node xmi:type="uml:ActivityFinalNode" xmi:id="EAID_D0CDE1BE_5A2F_4f3e_931D_3E6B089601EF" name="ActivityFinal" visibility="public">
+						<incoming xmi:idref="EAID_2199E4E3_BF1A_4edd_AD55_C4A868F0ECC7"/>
+					</node>
+					<node xmi:type="uml:InitialNode" xmi:id="EAID_F8F010E2_4C9D_4944_AF01_C92E884EBD62" name="ActivityInitial" visibility="public">
+						<outgoing xmi:idref="EAID_D8F2E8A7_402A_4ff9_B278_7D44991440C1"/>
+					</node>
+					<edge xmi:type="uml:ControlFlow" xmi:id="EAID_D8F2E8A7_402A_4ff9_B278_7D44991440C1" visibility="public" source="EAID_F8F010E2_4C9D_4944_AF01_C92E884EBD62" target="EAID_7B1045AC_F66B_4b66_A56D_D6D55D18BCBD"/>
+					<node xmi:type="uml:Action" xmi:id="EAID_54BCF831_2222_4ea8_906A_278F5B3BB066" name="Browse items" visibility="public">
+						<incoming xmi:idref="EAID_5D4C2873_B98F_4b6f_ADB6_59A0ED4FD5B9"/>
+						<outgoing xmi:idref="EAID_FCB5075A_9FE6_45e7_84AA_5BF2F4773DE3"/>
+					</node>
+					<edge xmi:type="uml:ControlFlow" xmi:id="EAID_FCB5075A_9FE6_45e7_84AA_5BF2F4773DE3" visibility="public" source="EAID_54BCF831_2222_4ea8_906A_278F5B3BB066" target="EAID_C10C2380_D20A_4e2b_9167_AB2EA0B11037"/>
+					<node xmi:type="uml:Action" xmi:id="EAID_08B013EF_506C_48e2_8B5E_2BC71D70E6FA" name="add to shopping cart" visibility="public">
+						<incoming xmi:idref="EAID_5805ECA7_D65C_44c9_8CAC_0ED9BA255B0F"/>
+						<outgoing xmi:idref="EAID_C0713CEB_FE72_48fe_ACB6_36AEA23365C3"/>
+					</node>
+					<edge xmi:type="uml:ControlFlow" xmi:id="EAID_C0713CEB_FE72_48fe_ACB6_36AEA23365C3" visibility="public" source="EAID_08B013EF_506C_48e2_8B5E_2BC71D70E6FA" target="EAID_7C7C6900_2FC4_4f5d_A9C3_63D3592A93A9"/>
+					<node xmi:type="uml:Action" xmi:id="EAID_178431D3_FD0E_44ab_8B15_6CF802DB7574" name="checkout" visibility="public">
+						<incoming xmi:idref="EAID_BB2B496F_E1D6_446b_8B7B_AB9A112A46E7"/>
+						<outgoing xmi:idref="EAID_2199E4E3_BF1A_4edd_AD55_C4A868F0ECC7"/>
+					</node>
+					<edge xmi:type="uml:ControlFlow" xmi:id="EAID_2199E4E3_BF1A_4edd_AD55_C4A868F0ECC7" visibility="public" source="EAID_178431D3_FD0E_44ab_8B15_6CF802DB7574" target="EAID_D0CDE1BE_5A2F_4f3e_931D_3E6B089601EF"/>
+					<node xmi:type="uml:DecisionNode" xmi:id="EAID_7B1045AC_F66B_4b66_A56D_D6D55D18BCBD" name="decision1" visibility="public">
+						<incoming xmi:idref="EAID_D8F2E8A7_402A_4ff9_B278_7D44991440C1"/>
+						<incoming xmi:idref="EAID_7CCFA40C_BC74_4418_AC22_0C2E95F1BFED"/>
+						<incoming xmi:idref="EAID_41CC97A9_B33D_4309_BF8D_218D614971A3"/>
+						<outgoing xmi:idref="EAID_A37F00E1_F1A2_452c_A45C_2256E9BDE66B"/>
+						<outgoing xmi:idref="EAID_985F73F9_D628_48b2_8C94_492C1136653F"/>
+					</node>
+					<edge xmi:type="uml:ControlFlow" xmi:id="EAID_985F73F9_D628_48b2_8C94_492C1136653F" name="search" visibility="public" source="EAID_7B1045AC_F66B_4b66_A56D_D6D55D18BCBD" target="EAID_4D2ACFD1_F2F5_43af_AAB2_F3F650F7C835"/>
+					<edge xmi:type="uml:ControlFlow" xmi:id="EAID_A37F00E1_F1A2_452c_A45C_2256E9BDE66B" name="browse" visibility="public" source="EAID_7B1045AC_F66B_4b66_A56D_D6D55D18BCBD" target="EAID_83E8F91F_4332_479c_B68E_6B01D44E4040"/>
+					<node xmi:type="uml:DecisionNode" xmi:id="EAID_973594F7_E3D6_4eb2_BA32_E4AF174B00DA" name="decision3" visibility="public">
+						<incoming xmi:idref="EAID_0B69B83A_DB25_467d_92C4_CF92D1521178"/>
+						<outgoing xmi:idref="EAID_81CBF0FA_0783_479b_9B74_D7E100AC383D"/>
+						<outgoing xmi:idref="EAID_5805ECA7_D65C_44c9_8CAC_0ED9BA255B0F"/>
+						<outgoing xmi:idref="EAID_12D09457_0B44_461c_B296_266E30D70C37"/>
+					</node>
+					<edge xmi:type="uml:ControlFlow" xmi:id="EAID_12D09457_0B44_461c_B296_266E30D70C37" name="browse" visibility="public" source="EAID_973594F7_E3D6_4eb2_BA32_E4AF174B00DA" target="EAID_83E8F91F_4332_479c_B68E_6B01D44E4040"/>
+					<edge xmi:type="uml:ControlFlow" xmi:id="EAID_5805ECA7_D65C_44c9_8CAC_0ED9BA255B0F" visibility="public" source="EAID_973594F7_E3D6_4eb2_BA32_E4AF174B00DA" target="EAID_08B013EF_506C_48e2_8B5E_2BC71D70E6FA"/>
+					<edge xmi:type="uml:ControlFlow" xmi:id="EAID_81CBF0FA_0783_479b_9B74_D7E100AC383D" name="new search" visibility="public" source="EAID_973594F7_E3D6_4eb2_BA32_E4AF174B00DA" target="EAID_4D2ACFD1_F2F5_43af_AAB2_F3F650F7C835"/>
+					<node xmi:type="uml:DecisionNode" xmi:id="EAID_7C7C6900_2FC4_4f5d_A9C3_63D3592A93A9" name="decision4" visibility="public">
+						<incoming xmi:idref="EAID_C0713CEB_FE72_48fe_ACB6_36AEA23365C3"/>
+						<incoming xmi:idref="EAID_8F40D023_8DF1_4253_A382_2AA1205A6EF3"/>
+						<outgoing xmi:idref="EAID_EB2FD722_6640_46ad_8220_A75A15825A56"/>
+						<outgoing xmi:idref="EAID_A15FEB81_062F_412f_B88E_AFF8B400ABCB"/>
+					</node>
+					<edge xmi:type="uml:ControlFlow" xmi:id="EAID_A15FEB81_062F_412f_B88E_AFF8B400ABCB" name="proceed" visibility="public" source="EAID_7C7C6900_2FC4_4f5d_A9C3_63D3592A93A9" target="EAID_A53A176D_0913_4b7c_8CAB_FC910C1C2A98"/>
+					<edge xmi:type="uml:ControlFlow" xmi:id="EAID_EB2FD722_6640_46ad_8220_A75A15825A56" visibility="public" source="EAID_7C7C6900_2FC4_4f5d_A9C3_63D3592A93A9" target="EAID_F2B0C38A_B8E5_431b_BA31_EDB422DCF36E"/>
+					<node xmi:type="uml:DecisionNode" xmi:id="EAID_FE675707_F17A_4dab_95E0_3FEC333E6F86" name="decison2" visibility="public">
+						<incoming xmi:idref="EAID_92EB8D7D_3B7D_4ce1_BBCE_EE2C05BA2C0A"/>
+						<outgoing xmi:idref="EAID_7CCFA40C_BC74_4418_AC22_0C2E95F1BFED"/>
+						<outgoing xmi:idref="EAID_51509651_1927_4a56_95CA_C57C38B99802"/>
+					</node>
+					<edge xmi:type="uml:ControlFlow" xmi:id="EAID_51509651_1927_4a56_95CA_C57C38B99802" name="found" visibility="public" source="EAID_FE675707_F17A_4dab_95E0_3FEC333E6F86" target="EAID_C10C2380_D20A_4e2b_9167_AB2EA0B11037"/>
+					<edge xmi:type="uml:ControlFlow" xmi:id="EAID_7CCFA40C_BC74_4418_AC22_0C2E95F1BFED" name="not found" visibility="public" source="EAID_FE675707_F17A_4dab_95E0_3FEC333E6F86" target="EAID_7B1045AC_F66B_4b66_A56D_D6D55D18BCBD"/>
+					<node xmi:type="uml:DecisionNode" xmi:id="EAID_70B9EBAF_1399_40c7_B2FC_3A5C26DF07FD" name="decison5" visibility="public">
+						<incoming xmi:idref="EAID_924913B7_6457_4ad5_AD41_A5A461A61FBC"/>
+						<outgoing xmi:idref="EAID_D6DEA662_6978_4e1f_BBB3_86E544B28EC5"/>
+						<outgoing xmi:idref="EAID_BB2B496F_E1D6_446b_8B7B_AB9A112A46E7"/>
+						<outgoing xmi:idref="EAID_875D8750_0ED4_424e_B99E_DD1FC6FF1424"/>
+					</node>
+					<edge xmi:type="uml:ControlFlow" xmi:id="EAID_875D8750_0ED4_424e_B99E_DD1FC6FF1424" name="more shopping" visibility="public" source="EAID_70B9EBAF_1399_40c7_B2FC_3A5C26DF07FD" target="EAID_A53A176D_0913_4b7c_8CAB_FC910C1C2A98"/>
+					<edge xmi:type="uml:ControlFlow" xmi:id="EAID_BB2B496F_E1D6_446b_8B7B_AB9A112A46E7" visibility="public" source="EAID_70B9EBAF_1399_40c7_B2FC_3A5C26DF07FD" target="EAID_178431D3_FD0E_44ab_8B15_6CF802DB7574"/>
+					<edge xmi:type="uml:ControlFlow" xmi:id="EAID_D6DEA662_6978_4e1f_BBB3_86E544B28EC5" name="update needed" visibility="public" source="EAID_70B9EBAF_1399_40c7_B2FC_3A5C26DF07FD" target="EAID_F35CA77D_289E_49c4_9477_6C9017909868"/>
+					<node xmi:type="uml:MergeNode" xmi:id="EAID_4D2ACFD1_F2F5_43af_AAB2_F3F650F7C835" name="merge1" visibility="public">
+						<incoming xmi:idref="EAID_985F73F9_D628_48b2_8C94_492C1136653F"/>
+						<incoming xmi:idref="EAID_81CBF0FA_0783_479b_9B74_D7E100AC383D"/>
+						<outgoing xmi:idref="EAID_B0DB5ECF_2C57_4902_814A_60522B9E76FD"/>
+					</node>
+					<edge xmi:type="uml:ControlFlow" xmi:id="EAID_B0DB5ECF_2C57_4902_814A_60522B9E76FD" visibility="public" source="EAID_4D2ACFD1_F2F5_43af_AAB2_F3F650F7C835" target="EAID_24AC3DF5_2171_4cf9_9CB9_D06DC96F2695"/>
+					<node xmi:type="uml:MergeNode" xmi:id="EAID_83E8F91F_4332_479c_B68E_6B01D44E4040" name="merge2" visibility="public">
+						<incoming xmi:idref="EAID_A37F00E1_F1A2_452c_A45C_2256E9BDE66B"/>
+						<incoming xmi:idref="EAID_12D09457_0B44_461c_B296_266E30D70C37"/>
+						<outgoing xmi:idref="EAID_5D4C2873_B98F_4b6f_ADB6_59A0ED4FD5B9"/>
+					</node>
+					<edge xmi:type="uml:ControlFlow" xmi:id="EAID_5D4C2873_B98F_4b6f_ADB6_59A0ED4FD5B9" visibility="public" source="EAID_83E8F91F_4332_479c_B68E_6B01D44E4040" target="EAID_54BCF831_2222_4ea8_906A_278F5B3BB066"/>
+					<node xmi:type="uml:MergeNode" xmi:id="EAID_C10C2380_D20A_4e2b_9167_AB2EA0B11037" name="merge3" visibility="public">
+						<incoming xmi:idref="EAID_FCB5075A_9FE6_45e7_84AA_5BF2F4773DE3"/>
+						<incoming xmi:idref="EAID_51509651_1927_4a56_95CA_C57C38B99802"/>
+						<outgoing xmi:idref="EAID_ADF50D32_1E10_4f1c_951E_FC9350625ACB"/>
+					</node>
+					<edge xmi:type="uml:ControlFlow" xmi:id="EAID_ADF50D32_1E10_4f1c_951E_FC9350625ACB" visibility="public" source="EAID_C10C2380_D20A_4e2b_9167_AB2EA0B11037" target="EAID_312BC5B2_0028_4094_BA47_C23789044BA6"/>
+					<node xmi:type="uml:MergeNode" xmi:id="EAID_A53A176D_0913_4b7c_8CAB_FC910C1C2A98" name="merge4" visibility="public">
+						<incoming xmi:idref="EAID_A15FEB81_062F_412f_B88E_AFF8B400ABCB"/>
+						<incoming xmi:idref="EAID_875D8750_0ED4_424e_B99E_DD1FC6FF1424"/>
+						<outgoing xmi:idref="EAID_41CC97A9_B33D_4309_BF8D_218D614971A3"/>
+					</node>
+					<edge xmi:type="uml:ControlFlow" xmi:id="EAID_41CC97A9_B33D_4309_BF8D_218D614971A3" visibility="public" source="EAID_A53A176D_0913_4b7c_8CAB_FC910C1C2A98" target="EAID_7B1045AC_F66B_4b66_A56D_D6D55D18BCBD"/>
+					<node xmi:type="uml:Action" xmi:id="EAID_24AC3DF5_2171_4cf9_9CB9_D06DC96F2695" name="search items" visibility="public">
+						<incoming xmi:idref="EAID_B0DB5ECF_2C57_4902_814A_60522B9E76FD"/>
+						<outgoing xmi:idref="EAID_92EB8D7D_3B7D_4ce1_BBCE_EE2C05BA2C0A"/>
+					</node>
+					<edge xmi:type="uml:ControlFlow" xmi:id="EAID_92EB8D7D_3B7D_4ce1_BBCE_EE2C05BA2C0A" visibility="public" source="EAID_24AC3DF5_2171_4cf9_9CB9_D06DC96F2695" target="EAID_FE675707_F17A_4dab_95E0_3FEC333E6F86"/>
+					<node xmi:type="uml:Action" xmi:id="EAID_F35CA77D_289E_49c4_9477_6C9017909868" name="update shopping cart" visibility="public">
+						<incoming xmi:idref="EAID_D6DEA662_6978_4e1f_BBB3_86E544B28EC5"/>
+						<outgoing xmi:idref="EAID_8F40D023_8DF1_4253_A382_2AA1205A6EF3"/>
+					</node>
+					<edge xmi:type="uml:ControlFlow" xmi:id="EAID_8F40D023_8DF1_4253_A382_2AA1205A6EF3" visibility="public" source="EAID_F35CA77D_289E_49c4_9477_6C9017909868" target="EAID_7C7C6900_2FC4_4f5d_A9C3_63D3592A93A9"/>
+					<node xmi:type="uml:Action" xmi:id="EAID_312BC5B2_0028_4094_BA47_C23789044BA6" name="view item" visibility="public">
+						<incoming xmi:idref="EAID_ADF50D32_1E10_4f1c_951E_FC9350625ACB"/>
+						<outgoing xmi:idref="EAID_0B69B83A_DB25_467d_92C4_CF92D1521178"/>
+					</node>
+					<edge xmi:type="uml:ControlFlow" xmi:id="EAID_0B69B83A_DB25_467d_92C4_CF92D1521178" visibility="public" source="EAID_312BC5B2_0028_4094_BA47_C23789044BA6" target="EAID_973594F7_E3D6_4eb2_BA32_E4AF174B00DA"/>
+					<node xmi:type="uml:Action" xmi:id="EAID_F2B0C38A_B8E5_431b_BA31_EDB422DCF36E" name="view shopping cart" visibility="public">
+						<incoming xmi:idref="EAID_EB2FD722_6640_46ad_8220_A75A15825A56"/>
+						<outgoing xmi:idref="EAID_924913B7_6457_4ad5_AD41_A5A461A61FBC"/>
+					</node>
+					<edge xmi:type="uml:ControlFlow" xmi:id="EAID_924913B7_6457_4ad5_AD41_A5A461A61FBC" visibility="public" source="EAID_F2B0C38A_B8E5_431b_BA31_EDB422DCF36E" target="EAID_70B9EBAF_1399_40c7_B2FC_3A5C26DF07FD"/>
+				</packagedElement>
+			</packagedElement>
+		</packagedElement>
+	</uml:Model>
+	<xmi:Extension extender="Enterprise Architect" extenderID="6.5">
+		<elements>
+			<element xmi:idref="EAPK_9BA197BB_8CBD_464f_9124_2404A24AAE41">
+				<packageproperties/>
+				<paths/>
+				<times created="2012-04-17 00:00:00" modified="2012-04-17 00:00:00"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" usedtd="FALSE" logxml="FALSE" packageFlags="isModel=1;"/>
+			</element>
+			<element xmi:idref="EAPK_6B79AB4D_B42B_4caf_8224_380B954D5A3F" xmi:type="uml:Package" name="search" scope="public">
+				<model package2="EAID_6B79AB4D_B42B_4caf_8224_380B954D5A3F" package="EAPK_9BA197BB_8CBD_464f_9124_2404A24AAE41" tpos="0" ea_localid="2" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Kai" version="1.0" phase="1.0" created="2015-11-19 10:20:57" modified="2015-11-19 10:20:57" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Model"/>
+				<packageproperties version="1.0"/>
+				<paths/>
+				<times created="2015-11-19 00:00:00" modified="2015-11-19 00:00:00"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" usedtd="FALSE" logxml="FALSE" packageFlags="isModel=1;VICON=3;"/>
+			</element>
+			<element xmi:idref="EAID_D0CDE1BE_5A2F_4f3e_931D_3E6B089601EF" xmi:type="uml:StateNode" name="ActivityFinal" scope="public">
+				<model package="EAPK_6B79AB4D_B42B_4caf_8224_380B954D5A3F" tpos="0" ea_localid="18" ea_eleType="element"/>
+				<properties isSpecification="false" sType="StateNode" nType="101" scope="public"/>
+				<project author="Kai" version="1.0" phase="1.0" created="2015-11-19 10:30:23" modified="2015-11-19 10:30:23" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="search"/>
+				<links>
+					<ControlFlow xmi:id="EAID_2199E4E3_BF1A_4edd_AD55_C4A868F0ECC7" start="EAID_178431D3_FD0E_44ab_8B15_6CF802DB7574" end="EAID_D0CDE1BE_5A2F_4f3e_931D_3E6B089601EF"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_F8F010E2_4C9D_4944_AF01_C92E884EBD62" xmi:type="uml:StateNode" name="ActivityInitial" scope="public">
+				<model package="EAPK_6B79AB4D_B42B_4caf_8224_380B954D5A3F" tpos="0" ea_localid="2" ea_eleType="element"/>
+				<properties isSpecification="false" sType="StateNode" nType="100" scope="public"/>
+				<project author="Kai" version="1.0" phase="1.0" created="2015-11-19 10:21:26" modified="2015-11-19 10:21:26" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="search"/>
+				<links>
+					<ControlFlow xmi:id="EAID_D8F2E8A7_402A_4ff9_B278_7D44991440C1" start="EAID_F8F010E2_4C9D_4944_AF01_C92E884EBD62" end="EAID_7B1045AC_F66B_4b66_A56D_D6D55D18BCBD"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_54BCF831_2222_4ea8_906A_278F5B3BB066" xmi:type="uml:Action" name="Browse items" scope="public">
+				<model package="EAPK_6B79AB4D_B42B_4caf_8224_380B954D5A3F" tpos="0" ea_localid="7" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Action" nType="0" scope="public"/>
+				<project author="Kai" version="1.0" phase="1.0" created="2015-11-19 10:22:24" modified="2015-11-19 10:22:39" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;" object_style="ShowBeh=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="search"/>
+				<links>
+					<ControlFlow xmi:id="EAID_FCB5075A_9FE6_45e7_84AA_5BF2F4773DE3" start="EAID_54BCF831_2222_4ea8_906A_278F5B3BB066" end="EAID_C10C2380_D20A_4e2b_9167_AB2EA0B11037"/>
+					<ControlFlow xmi:id="EAID_5D4C2873_B98F_4b6f_ADB6_59A0ED4FD5B9" start="EAID_83E8F91F_4332_479c_B68E_6B01D44E4040" end="EAID_54BCF831_2222_4ea8_906A_278F5B3BB066"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_08B013EF_506C_48e2_8B5E_2BC71D70E6FA" xmi:type="uml:Action" name="add to shopping cart" scope="public">
+				<model package="EAPK_6B79AB4D_B42B_4caf_8224_380B954D5A3F" tpos="0" ea_localid="12" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Action" nType="0" scope="public"/>
+				<project author="Kai" version="1.0" phase="1.0" created="2015-11-19 10:26:53" modified="2015-11-19 10:27:03" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;" object_style="ShowBeh=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="search"/>
+				<links>
+					<ControlFlow xmi:id="EAID_C0713CEB_FE72_48fe_ACB6_36AEA23365C3" start="EAID_08B013EF_506C_48e2_8B5E_2BC71D70E6FA" end="EAID_7C7C6900_2FC4_4f5d_A9C3_63D3592A93A9"/>
+					<ControlFlow xmi:id="EAID_5805ECA7_D65C_44c9_8CAC_0ED9BA255B0F" start="EAID_973594F7_E3D6_4eb2_BA32_E4AF174B00DA" end="EAID_08B013EF_506C_48e2_8B5E_2BC71D70E6FA"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_178431D3_FD0E_44ab_8B15_6CF802DB7574" xmi:type="uml:Action" name="checkout" scope="public">
+				<model package="EAPK_6B79AB4D_B42B_4caf_8224_380B954D5A3F" tpos="0" ea_localid="17" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Action" nType="0" scope="public"/>
+				<project author="Kai" version="1.0" phase="1.0" created="2015-11-19 10:30:10" modified="2015-11-19 10:30:16" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;" object_style="ShowBeh=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="search"/>
+				<links>
+					<ControlFlow xmi:id="EAID_2199E4E3_BF1A_4edd_AD55_C4A868F0ECC7" start="EAID_178431D3_FD0E_44ab_8B15_6CF802DB7574" end="EAID_D0CDE1BE_5A2F_4f3e_931D_3E6B089601EF"/>
+					<ControlFlow xmi:id="EAID_BB2B496F_E1D6_446b_8B7B_AB9A112A46E7" start="EAID_70B9EBAF_1399_40c7_B2FC_3A5C26DF07FD" end="EAID_178431D3_FD0E_44ab_8B15_6CF802DB7574"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_7B1045AC_F66B_4b66_A56D_D6D55D18BCBD" xmi:type="uml:Decision" name="decision1" scope="public">
+				<model package="EAPK_6B79AB4D_B42B_4caf_8224_380B954D5A3F" tpos="0" ea_localid="3" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Decision" nType="0" scope="public"/>
+				<project author="Kai" version="1.0" phase="1.0" created="2015-11-19 10:21:35" modified="2015-11-19 10:21:47" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="search"/>
+				<links>
+					<ControlFlow xmi:id="EAID_985F73F9_D628_48b2_8C94_492C1136653F" start="EAID_7B1045AC_F66B_4b66_A56D_D6D55D18BCBD" end="EAID_4D2ACFD1_F2F5_43af_AAB2_F3F650F7C835"/>
+					<ControlFlow xmi:id="EAID_A37F00E1_F1A2_452c_A45C_2256E9BDE66B" start="EAID_7B1045AC_F66B_4b66_A56D_D6D55D18BCBD" end="EAID_83E8F91F_4332_479c_B68E_6B01D44E4040"/>
+					<ControlFlow xmi:id="EAID_41CC97A9_B33D_4309_BF8D_218D614971A3" start="EAID_A53A176D_0913_4b7c_8CAB_FC910C1C2A98" end="EAID_7B1045AC_F66B_4b66_A56D_D6D55D18BCBD"/>
+					<ControlFlow xmi:id="EAID_7CCFA40C_BC74_4418_AC22_0C2E95F1BFED" start="EAID_FE675707_F17A_4dab_95E0_3FEC333E6F86" end="EAID_7B1045AC_F66B_4b66_A56D_D6D55D18BCBD"/>
+					<ControlFlow xmi:id="EAID_D8F2E8A7_402A_4ff9_B278_7D44991440C1" start="EAID_F8F010E2_4C9D_4944_AF01_C92E884EBD62" end="EAID_7B1045AC_F66B_4b66_A56D_D6D55D18BCBD"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_973594F7_E3D6_4eb2_BA32_E4AF174B00DA" xmi:type="uml:Decision" name="decision3" scope="public">
+				<model package="EAPK_6B79AB4D_B42B_4caf_8224_380B954D5A3F" tpos="0" ea_localid="11" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Decision" nType="0" scope="public"/>
+				<project author="Kai" version="1.0" phase="1.0" created="2015-11-19 10:25:05" modified="2015-11-19 10:25:20" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="search"/>
+				<links>
+					<ControlFlow xmi:id="EAID_12D09457_0B44_461c_B296_266E30D70C37" start="EAID_973594F7_E3D6_4eb2_BA32_E4AF174B00DA" end="EAID_83E8F91F_4332_479c_B68E_6B01D44E4040"/>
+					<ControlFlow xmi:id="EAID_5805ECA7_D65C_44c9_8CAC_0ED9BA255B0F" start="EAID_973594F7_E3D6_4eb2_BA32_E4AF174B00DA" end="EAID_08B013EF_506C_48e2_8B5E_2BC71D70E6FA"/>
+					<ControlFlow xmi:id="EAID_81CBF0FA_0783_479b_9B74_D7E100AC383D" start="EAID_973594F7_E3D6_4eb2_BA32_E4AF174B00DA" end="EAID_4D2ACFD1_F2F5_43af_AAB2_F3F650F7C835"/>
+					<ControlFlow xmi:id="EAID_0B69B83A_DB25_467d_92C4_CF92D1521178" start="EAID_312BC5B2_0028_4094_BA47_C23789044BA6" end="EAID_973594F7_E3D6_4eb2_BA32_E4AF174B00DA"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_7C7C6900_2FC4_4f5d_A9C3_63D3592A93A9" xmi:type="uml:Decision" name="decision4" scope="public">
+				<model package="EAPK_6B79AB4D_B42B_4caf_8224_380B954D5A3F" tpos="0" ea_localid="13" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Decision" nType="0" scope="public"/>
+				<project author="Kai" version="1.0" phase="1.0" created="2015-11-19 10:28:01" modified="2015-11-19 10:28:08" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="search"/>
+				<links>
+					<ControlFlow xmi:id="EAID_A15FEB81_062F_412f_B88E_AFF8B400ABCB" start="EAID_7C7C6900_2FC4_4f5d_A9C3_63D3592A93A9" end="EAID_A53A176D_0913_4b7c_8CAB_FC910C1C2A98"/>
+					<ControlFlow xmi:id="EAID_EB2FD722_6640_46ad_8220_A75A15825A56" start="EAID_7C7C6900_2FC4_4f5d_A9C3_63D3592A93A9" end="EAID_F2B0C38A_B8E5_431b_BA31_EDB422DCF36E"/>
+					<ControlFlow xmi:id="EAID_8F40D023_8DF1_4253_A382_2AA1205A6EF3" start="EAID_F35CA77D_289E_49c4_9477_6C9017909868" end="EAID_7C7C6900_2FC4_4f5d_A9C3_63D3592A93A9"/>
+					<ControlFlow xmi:id="EAID_C0713CEB_FE72_48fe_ACB6_36AEA23365C3" start="EAID_08B013EF_506C_48e2_8B5E_2BC71D70E6FA" end="EAID_7C7C6900_2FC4_4f5d_A9C3_63D3592A93A9"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_FE675707_F17A_4dab_95E0_3FEC333E6F86" xmi:type="uml:Decision" name="decison2" scope="public">
+				<model package="EAPK_6B79AB4D_B42B_4caf_8224_380B954D5A3F" tpos="0" ea_localid="8" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Decision" nType="0" scope="public"/>
+				<project author="Kai" version="1.0" phase="1.0" created="2015-11-19 10:22:44" modified="2015-11-19 10:22:52" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="search"/>
+				<links>
+					<ControlFlow xmi:id="EAID_51509651_1927_4a56_95CA_C57C38B99802" start="EAID_FE675707_F17A_4dab_95E0_3FEC333E6F86" end="EAID_C10C2380_D20A_4e2b_9167_AB2EA0B11037"/>
+					<ControlFlow xmi:id="EAID_7CCFA40C_BC74_4418_AC22_0C2E95F1BFED" start="EAID_FE675707_F17A_4dab_95E0_3FEC333E6F86" end="EAID_7B1045AC_F66B_4b66_A56D_D6D55D18BCBD"/>
+					<ControlFlow xmi:id="EAID_92EB8D7D_3B7D_4ce1_BBCE_EE2C05BA2C0A" start="EAID_24AC3DF5_2171_4cf9_9CB9_D06DC96F2695" end="EAID_FE675707_F17A_4dab_95E0_3FEC333E6F86"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_70B9EBAF_1399_40c7_B2FC_3A5C26DF07FD" xmi:type="uml:Decision" name="decison5" scope="public">
+				<model package="EAPK_6B79AB4D_B42B_4caf_8224_380B954D5A3F" tpos="0" ea_localid="15" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Decision" nType="0" scope="public"/>
+				<project author="Kai" version="1.0" phase="1.0" created="2015-11-19 10:29:02" modified="2015-11-19 10:29:07" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="search"/>
+				<links>
+					<ControlFlow xmi:id="EAID_875D8750_0ED4_424e_B99E_DD1FC6FF1424" start="EAID_70B9EBAF_1399_40c7_B2FC_3A5C26DF07FD" end="EAID_A53A176D_0913_4b7c_8CAB_FC910C1C2A98"/>
+					<ControlFlow xmi:id="EAID_BB2B496F_E1D6_446b_8B7B_AB9A112A46E7" start="EAID_70B9EBAF_1399_40c7_B2FC_3A5C26DF07FD" end="EAID_178431D3_FD0E_44ab_8B15_6CF802DB7574"/>
+					<ControlFlow xmi:id="EAID_D6DEA662_6978_4e1f_BBB3_86E544B28EC5" start="EAID_70B9EBAF_1399_40c7_B2FC_3A5C26DF07FD" end="EAID_F35CA77D_289E_49c4_9477_6C9017909868"/>
+					<ControlFlow xmi:id="EAID_924913B7_6457_4ad5_AD41_A5A461A61FBC" start="EAID_F2B0C38A_B8E5_431b_BA31_EDB422DCF36E" end="EAID_70B9EBAF_1399_40c7_B2FC_3A5C26DF07FD"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_4D2ACFD1_F2F5_43af_AAB2_F3F650F7C835" xmi:type="uml:MergeNode" name="merge1" scope="public">
+				<model package="EAPK_6B79AB4D_B42B_4caf_8224_380B954D5A3F" tpos="0" ea_localid="4" ea_eleType="element"/>
+				<properties isSpecification="false" sType="MergeNode" nType="0" scope="public"/>
+				<project author="Kai" version="1.0" phase="1.0" created="2015-11-19 10:21:52" modified="2015-11-19 10:21:56" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="search"/>
+				<links>
+					<ControlFlow xmi:id="EAID_B0DB5ECF_2C57_4902_814A_60522B9E76FD" start="EAID_4D2ACFD1_F2F5_43af_AAB2_F3F650F7C835" end="EAID_24AC3DF5_2171_4cf9_9CB9_D06DC96F2695"/>
+					<ControlFlow xmi:id="EAID_81CBF0FA_0783_479b_9B74_D7E100AC383D" start="EAID_973594F7_E3D6_4eb2_BA32_E4AF174B00DA" end="EAID_4D2ACFD1_F2F5_43af_AAB2_F3F650F7C835"/>
+					<ControlFlow xmi:id="EAID_985F73F9_D628_48b2_8C94_492C1136653F" start="EAID_7B1045AC_F66B_4b66_A56D_D6D55D18BCBD" end="EAID_4D2ACFD1_F2F5_43af_AAB2_F3F650F7C835"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_83E8F91F_4332_479c_B68E_6B01D44E4040" xmi:type="uml:MergeNode" name="merge2" scope="public">
+				<model package="EAPK_6B79AB4D_B42B_4caf_8224_380B954D5A3F" tpos="0" ea_localid="5" ea_eleType="element"/>
+				<properties isSpecification="false" sType="MergeNode" nType="0" scope="public"/>
+				<project author="Kai" version="1.0" phase="1.0" created="2015-11-19 10:21:59" modified="2015-11-19 10:22:03" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="search"/>
+				<links>
+					<ControlFlow xmi:id="EAID_5D4C2873_B98F_4b6f_ADB6_59A0ED4FD5B9" start="EAID_83E8F91F_4332_479c_B68E_6B01D44E4040" end="EAID_54BCF831_2222_4ea8_906A_278F5B3BB066"/>
+					<ControlFlow xmi:id="EAID_12D09457_0B44_461c_B296_266E30D70C37" start="EAID_973594F7_E3D6_4eb2_BA32_E4AF174B00DA" end="EAID_83E8F91F_4332_479c_B68E_6B01D44E4040"/>
+					<ControlFlow xmi:id="EAID_A37F00E1_F1A2_452c_A45C_2256E9BDE66B" start="EAID_7B1045AC_F66B_4b66_A56D_D6D55D18BCBD" end="EAID_83E8F91F_4332_479c_B68E_6B01D44E4040"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_C10C2380_D20A_4e2b_9167_AB2EA0B11037" xmi:type="uml:MergeNode" name="merge3" scope="public">
+				<model package="EAPK_6B79AB4D_B42B_4caf_8224_380B954D5A3F" tpos="0" ea_localid="9" ea_eleType="element"/>
+				<properties isSpecification="false" sType="MergeNode" nType="0" scope="public"/>
+				<project author="Kai" version="1.0" phase="1.0" created="2015-11-19 10:23:33" modified="2015-11-19 10:23:39" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="search"/>
+				<links>
+					<ControlFlow xmi:id="EAID_ADF50D32_1E10_4f1c_951E_FC9350625ACB" start="EAID_C10C2380_D20A_4e2b_9167_AB2EA0B11037" end="EAID_312BC5B2_0028_4094_BA47_C23789044BA6"/>
+					<ControlFlow xmi:id="EAID_51509651_1927_4a56_95CA_C57C38B99802" start="EAID_FE675707_F17A_4dab_95E0_3FEC333E6F86" end="EAID_C10C2380_D20A_4e2b_9167_AB2EA0B11037"/>
+					<ControlFlow xmi:id="EAID_FCB5075A_9FE6_45e7_84AA_5BF2F4773DE3" start="EAID_54BCF831_2222_4ea8_906A_278F5B3BB066" end="EAID_C10C2380_D20A_4e2b_9167_AB2EA0B11037"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_A53A176D_0913_4b7c_8CAB_FC910C1C2A98" xmi:type="uml:MergeNode" name="merge4" scope="public">
+				<model package="EAPK_6B79AB4D_B42B_4caf_8224_380B954D5A3F" tpos="0" ea_localid="19" ea_eleType="element"/>
+				<properties isSpecification="false" sType="MergeNode" nType="0" scope="public"/>
+				<project author="Kai" version="1.0" phase="1.0" created="2015-11-19 10:30:51" modified="2015-11-19 10:30:56" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="search"/>
+				<links>
+					<ControlFlow xmi:id="EAID_41CC97A9_B33D_4309_BF8D_218D614971A3" start="EAID_A53A176D_0913_4b7c_8CAB_FC910C1C2A98" end="EAID_7B1045AC_F66B_4b66_A56D_D6D55D18BCBD"/>
+					<ControlFlow xmi:id="EAID_875D8750_0ED4_424e_B99E_DD1FC6FF1424" start="EAID_70B9EBAF_1399_40c7_B2FC_3A5C26DF07FD" end="EAID_A53A176D_0913_4b7c_8CAB_FC910C1C2A98"/>
+					<ControlFlow xmi:id="EAID_A15FEB81_062F_412f_B88E_AFF8B400ABCB" start="EAID_7C7C6900_2FC4_4f5d_A9C3_63D3592A93A9" end="EAID_A53A176D_0913_4b7c_8CAB_FC910C1C2A98"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_24AC3DF5_2171_4cf9_9CB9_D06DC96F2695" xmi:type="uml:Action" name="search items" scope="public">
+				<model package="EAPK_6B79AB4D_B42B_4caf_8224_380B954D5A3F" tpos="0" ea_localid="6" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Action" nType="0" scope="public"/>
+				<project author="Kai" version="1.0" phase="1.0" created="2015-11-19 10:22:09" modified="2015-11-19 10:22:19" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;" object_style="ShowBeh=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="search"/>
+				<links>
+					<ControlFlow xmi:id="EAID_92EB8D7D_3B7D_4ce1_BBCE_EE2C05BA2C0A" start="EAID_24AC3DF5_2171_4cf9_9CB9_D06DC96F2695" end="EAID_FE675707_F17A_4dab_95E0_3FEC333E6F86"/>
+					<ControlFlow xmi:id="EAID_B0DB5ECF_2C57_4902_814A_60522B9E76FD" start="EAID_4D2ACFD1_F2F5_43af_AAB2_F3F650F7C835" end="EAID_24AC3DF5_2171_4cf9_9CB9_D06DC96F2695"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_F35CA77D_289E_49c4_9477_6C9017909868" xmi:type="uml:Action" name="update shopping cart" scope="public">
+				<model package="EAPK_6B79AB4D_B42B_4caf_8224_380B954D5A3F" tpos="0" ea_localid="16" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Action" nType="0" scope="public"/>
+				<project author="Kai" version="1.0" phase="1.0" created="2015-11-19 10:29:16" modified="2015-11-19 10:29:32" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;" object_style="ShowBeh=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="search"/>
+				<links>
+					<ControlFlow xmi:id="EAID_8F40D023_8DF1_4253_A382_2AA1205A6EF3" start="EAID_F35CA77D_289E_49c4_9477_6C9017909868" end="EAID_7C7C6900_2FC4_4f5d_A9C3_63D3592A93A9"/>
+					<ControlFlow xmi:id="EAID_D6DEA662_6978_4e1f_BBB3_86E544B28EC5" start="EAID_70B9EBAF_1399_40c7_B2FC_3A5C26DF07FD" end="EAID_F35CA77D_289E_49c4_9477_6C9017909868"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_312BC5B2_0028_4094_BA47_C23789044BA6" xmi:type="uml:Action" name="view item" scope="public">
+				<model package="EAPK_6B79AB4D_B42B_4caf_8224_380B954D5A3F" tpos="0" ea_localid="10" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Action" nType="0" scope="public"/>
+				<project author="Kai" version="1.0" phase="1.0" created="2015-11-19 10:24:40" modified="2015-11-19 10:24:45" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;" object_style="ShowBeh=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="search"/>
+				<links>
+					<ControlFlow xmi:id="EAID_0B69B83A_DB25_467d_92C4_CF92D1521178" start="EAID_312BC5B2_0028_4094_BA47_C23789044BA6" end="EAID_973594F7_E3D6_4eb2_BA32_E4AF174B00DA"/>
+					<ControlFlow xmi:id="EAID_ADF50D32_1E10_4f1c_951E_FC9350625ACB" start="EAID_C10C2380_D20A_4e2b_9167_AB2EA0B11037" end="EAID_312BC5B2_0028_4094_BA47_C23789044BA6"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_F2B0C38A_B8E5_431b_BA31_EDB422DCF36E" xmi:type="uml:Action" name="view shopping cart" scope="public">
+				<model package="EAPK_6B79AB4D_B42B_4caf_8224_380B954D5A3F" tpos="0" ea_localid="14" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Action" nType="0" scope="public"/>
+				<project author="Kai" version="1.0" phase="1.0" created="2015-11-19 10:28:36" modified="2015-11-19 10:28:44" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;" object_style="ShowBeh=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="search"/>
+				<links>
+					<ControlFlow xmi:id="EAID_924913B7_6457_4ad5_AD41_A5A461A61FBC" start="EAID_F2B0C38A_B8E5_431b_BA31_EDB422DCF36E" end="EAID_70B9EBAF_1399_40c7_B2FC_3A5C26DF07FD"/>
+					<ControlFlow xmi:id="EAID_EB2FD722_6640_46ad_8220_A75A15825A56" start="EAID_7C7C6900_2FC4_4f5d_A9C3_63D3592A93A9" end="EAID_F2B0C38A_B8E5_431b_BA31_EDB422DCF36E"/>
+				</links>
+			</element>
+		</elements>
+		<connectors>
+			<connector xmi:idref="EAID_2199E4E3_BF1A_4edd_AD55_C4A868F0ECC7">
+				<source xmi:idref="EAID_178431D3_FD0E_44ab_8B15_6CF802DB7574">
+					<model ea_localid="17" type="Action" name="checkout"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_D0CDE1BE_5A2F_4f3e_931D_3E6B089601EF">
+					<model ea_localid="18" type="StateNode" name="ActivityFinal"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="21"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_D8F2E8A7_402A_4ff9_B278_7D44991440C1">
+				<source xmi:idref="EAID_F8F010E2_4C9D_4944_AF01_C92E884EBD62">
+					<model ea_localid="2" type="StateNode" name="ActivityInitial"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_7B1045AC_F66B_4b66_A56D_D6D55D18BCBD">
+					<model ea_localid="3" type="Decision" name="decision1"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="1"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_FCB5075A_9FE6_45e7_84AA_5BF2F4773DE3">
+				<source xmi:idref="EAID_54BCF831_2222_4ea8_906A_278F5B3BB066">
+					<model ea_localid="7" type="Action" name="Browse items"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_C10C2380_D20A_4e2b_9167_AB2EA0B11037">
+					<model ea_localid="9" type="MergeNode" name="merge3"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="9"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_5D4C2873_B98F_4b6f_ADB6_59A0ED4FD5B9">
+				<source xmi:idref="EAID_83E8F91F_4332_479c_B68E_6B01D44E4040">
+					<model ea_localid="5" type="MergeNode" name="merge2"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_54BCF831_2222_4ea8_906A_278F5B3BB066">
+					<model ea_localid="7" type="Action" name="Browse items"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="5"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_C0713CEB_FE72_48fe_ACB6_36AEA23365C3">
+				<source xmi:idref="EAID_08B013EF_506C_48e2_8B5E_2BC71D70E6FA">
+					<model ea_localid="12" type="Action" name="add to shopping cart"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_7C7C6900_2FC4_4f5d_A9C3_63D3592A93A9">
+					<model ea_localid="13" type="Decision" name="decision4"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="15"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_5805ECA7_D65C_44c9_8CAC_0ED9BA255B0F">
+				<source xmi:idref="EAID_973594F7_E3D6_4eb2_BA32_E4AF174B00DA">
+					<model ea_localid="11" type="Decision" name="decision3"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_08B013EF_506C_48e2_8B5E_2BC71D70E6FA">
+					<model ea_localid="12" type="Action" name="add to shopping cart"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="14"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_BB2B496F_E1D6_446b_8B7B_AB9A112A46E7">
+				<source xmi:idref="EAID_70B9EBAF_1399_40c7_B2FC_3A5C26DF07FD">
+					<model ea_localid="15" type="Decision" name="decison5"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_178431D3_FD0E_44ab_8B15_6CF802DB7574">
+					<model ea_localid="17" type="Action" name="checkout"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="20"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_985F73F9_D628_48b2_8C94_492C1136653F">
+				<source xmi:idref="EAID_7B1045AC_F66B_4b66_A56D_D6D55D18BCBD">
+					<model ea_localid="3" type="Decision" name="decision1"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_4D2ACFD1_F2F5_43af_AAB2_F3F650F7C835">
+					<model ea_localid="4" type="MergeNode" name="merge1"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="2"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels rt="search"/>
+				<extendedProperties/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_A37F00E1_F1A2_452c_A45C_2256E9BDE66B">
+				<source xmi:idref="EAID_7B1045AC_F66B_4b66_A56D_D6D55D18BCBD">
+					<model ea_localid="3" type="Decision" name="decision1"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_83E8F91F_4332_479c_B68E_6B01D44E4040">
+					<model ea_localid="5" type="MergeNode" name="merge2"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="3"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels rt="browse"/>
+				<extendedProperties/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_41CC97A9_B33D_4309_BF8D_218D614971A3">
+				<source xmi:idref="EAID_A53A176D_0913_4b7c_8CAB_FC910C1C2A98">
+					<model ea_localid="19" type="MergeNode" name="merge4"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_7B1045AC_F66B_4b66_A56D_D6D55D18BCBD">
+					<model ea_localid="3" type="Decision" name="decision1"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="24"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_7CCFA40C_BC74_4418_AC22_0C2E95F1BFED">
+				<source xmi:idref="EAID_FE675707_F17A_4dab_95E0_3FEC333E6F86">
+					<model ea_localid="8" type="Decision" name="decison2"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_7B1045AC_F66B_4b66_A56D_D6D55D18BCBD">
+					<model ea_localid="3" type="Decision" name="decision1"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="7"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels rt="not found"/>
+				<extendedProperties/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_12D09457_0B44_461c_B296_266E30D70C37">
+				<source xmi:idref="EAID_973594F7_E3D6_4eb2_BA32_E4AF174B00DA">
+					<model ea_localid="11" type="Decision" name="decision3"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_83E8F91F_4332_479c_B68E_6B01D44E4040">
+					<model ea_localid="5" type="MergeNode" name="merge2"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="13"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels rt="browse"/>
+				<extendedProperties/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_81CBF0FA_0783_479b_9B74_D7E100AC383D">
+				<source xmi:idref="EAID_973594F7_E3D6_4eb2_BA32_E4AF174B00DA">
+					<model ea_localid="11" type="Decision" name="decision3"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_4D2ACFD1_F2F5_43af_AAB2_F3F650F7C835">
+					<model ea_localid="4" type="MergeNode" name="merge1"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="12"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels rt="new search"/>
+				<extendedProperties/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_0B69B83A_DB25_467d_92C4_CF92D1521178">
+				<source xmi:idref="EAID_312BC5B2_0028_4094_BA47_C23789044BA6">
+					<model ea_localid="10" type="Action" name="view item"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_973594F7_E3D6_4eb2_BA32_E4AF174B00DA">
+					<model ea_localid="11" type="Decision" name="decision3"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="11"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_A15FEB81_062F_412f_B88E_AFF8B400ABCB">
+				<source xmi:idref="EAID_7C7C6900_2FC4_4f5d_A9C3_63D3592A93A9">
+					<model ea_localid="13" type="Decision" name="decision4"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_A53A176D_0913_4b7c_8CAB_FC910C1C2A98">
+					<model ea_localid="19" type="MergeNode" name="merge4"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="22"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels rt="proceed"/>
+				<extendedProperties/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_EB2FD722_6640_46ad_8220_A75A15825A56">
+				<source xmi:idref="EAID_7C7C6900_2FC4_4f5d_A9C3_63D3592A93A9">
+					<model ea_localid="13" type="Decision" name="decision4"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_F2B0C38A_B8E5_431b_BA31_EDB422DCF36E">
+					<model ea_localid="14" type="Action" name="view shopping cart"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="16"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_8F40D023_8DF1_4253_A382_2AA1205A6EF3">
+				<source xmi:idref="EAID_F35CA77D_289E_49c4_9477_6C9017909868">
+					<model ea_localid="16" type="Action" name="update shopping cart"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_7C7C6900_2FC4_4f5d_A9C3_63D3592A93A9">
+					<model ea_localid="13" type="Decision" name="decision4"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="19"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_51509651_1927_4a56_95CA_C57C38B99802">
+				<source xmi:idref="EAID_FE675707_F17A_4dab_95E0_3FEC333E6F86">
+					<model ea_localid="8" type="Decision" name="decison2"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_C10C2380_D20A_4e2b_9167_AB2EA0B11037">
+					<model ea_localid="9" type="MergeNode" name="merge3"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="8"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels rt="found"/>
+				<extendedProperties/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_92EB8D7D_3B7D_4ce1_BBCE_EE2C05BA2C0A">
+				<source xmi:idref="EAID_24AC3DF5_2171_4cf9_9CB9_D06DC96F2695">
+					<model ea_localid="6" type="Action" name="search items"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_FE675707_F17A_4dab_95E0_3FEC333E6F86">
+					<model ea_localid="8" type="Decision" name="decison2"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="6"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_875D8750_0ED4_424e_B99E_DD1FC6FF1424">
+				<source xmi:idref="EAID_70B9EBAF_1399_40c7_B2FC_3A5C26DF07FD">
+					<model ea_localid="15" type="Decision" name="decison5"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_A53A176D_0913_4b7c_8CAB_FC910C1C2A98">
+					<model ea_localid="19" type="MergeNode" name="merge4"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="23"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels rt="more shopping"/>
+				<extendedProperties/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_D6DEA662_6978_4e1f_BBB3_86E544B28EC5">
+				<source xmi:idref="EAID_70B9EBAF_1399_40c7_B2FC_3A5C26DF07FD">
+					<model ea_localid="15" type="Decision" name="decison5"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_F35CA77D_289E_49c4_9477_6C9017909868">
+					<model ea_localid="16" type="Action" name="update shopping cart"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="18"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels rt="update needed"/>
+				<extendedProperties/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_924913B7_6457_4ad5_AD41_A5A461A61FBC">
+				<source xmi:idref="EAID_F2B0C38A_B8E5_431b_BA31_EDB422DCF36E">
+					<model ea_localid="14" type="Action" name="view shopping cart"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_70B9EBAF_1399_40c7_B2FC_3A5C26DF07FD">
+					<model ea_localid="15" type="Decision" name="decison5"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="17"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_B0DB5ECF_2C57_4902_814A_60522B9E76FD">
+				<source xmi:idref="EAID_4D2ACFD1_F2F5_43af_AAB2_F3F650F7C835">
+					<model ea_localid="4" type="MergeNode" name="merge1"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_24AC3DF5_2171_4cf9_9CB9_D06DC96F2695">
+					<model ea_localid="6" type="Action" name="search items"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="4"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_ADF50D32_1E10_4f1c_951E_FC9350625ACB">
+				<source xmi:idref="EAID_C10C2380_D20A_4e2b_9167_AB2EA0B11037">
+					<model ea_localid="9" type="MergeNode" name="merge3"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_312BC5B2_0028_4094_BA47_C23789044BA6">
+					<model ea_localid="10" type="Action" name="view item"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="10"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+		</connectors>
+		<primitivetypes>
+			<packagedElement xmi:type="uml:Package" xmi:id="EAPrimitiveTypesPackage" name="EA_PrimitiveTypes_Package" visibility="public"/>
+		</primitivetypes>
+		<profiles/>
+		<diagrams>
+			<diagram xmi:id="EAID_BDCE314B_1F13_46e1_BC08_3BF306609F43">
+				<model package="EAPK_6B79AB4D_B42B_4caf_8224_380B954D5A3F" localID="1" owner="EAPK_6B79AB4D_B42B_4caf_8224_380B954D5A3F"/>
+				<properties name="search" type="Activity"/>
+				<project author="Kai" version="1.0" created="2015-11-19 10:21:05" modified="2015-11-19 10:33:12"/>
+				<style1 value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=2;PPgs.cy=1;DocSize.cx=780;DocSize.cy=1134;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=9;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
+				<style2 value="ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;ProfileData=;MDGDgm=;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;SaveTag=43D56446;"/>
+				<swimlanes value="locked=false;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;hl=1;cls=0;"/>
+				<matrixitems value="locked=false;matrixactive=false;swimlanesactive=true;kanbanactive=false;width=1;"/>
+				<extendedProperties/>
+				<elements>
+					<element geometry="Left=627;Top=423;Right=653;Bottom=457;" subject="EAID_A53A176D_0913_4b7c_8CAB_FC910C1C2A98" seqno="1" style="DUID=2EA0EE2A;LBL=CX=36:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:ALT=0:ROT=0;"/>
+					<element geometry="Left=827;Top=576;Right=847;Bottom=596;" subject="EAID_D0CDE1BE_5A2F_4f3e_931D_3E6B089601EF" seqno="2" style="DUID=5DBFE258;LBL=CX=58:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:ALT=0:ROT=0;"/>
+					<element geometry="Left=803;Top=500;Right=873;Bottom=535;" subject="EAID_178431D3_FD0E_44ab_8B15_6CF802DB7574" seqno="3" style="DUID=2FA0ACF3;"/>
+					<element geometry="Left=886;Top=417;Right=956;Bottom=459;" subject="EAID_F35CA77D_289E_49c4_9477_6C9017909868" seqno="4" style="DUID=813A7475;"/>
+					<element geometry="Left=811;Top=424;Right=837;Bottom=458;" subject="EAID_70B9EBAF_1399_40c7_B2FC_3A5C26DF07FD" seqno="5" style="DUID=72F1DE7C;LBL=CX=42:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:ALT=0:ROT=0;"/>
+					<element geometry="Left=784;Top=334;Right=854;Bottom=376;" subject="EAID_F2B0C38A_B8E5_431b_BA31_EDB422DCF36E" seqno="6" style="DUID=B194172F;"/>
+					<element geometry="Left=807;Top=264;Right=833;Bottom=298;" subject="EAID_7C7C6900_2FC4_4f5d_A9C3_63D3592A93A9" seqno="7" style="DUID=3EA3311B;LBL=CX=45:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:ALT=0:ROT=0;"/>
+					<element geometry="Left=784;Top=160;Right=854;Bottom=202;" subject="EAID_08B013EF_506C_48e2_8B5E_2BC71D70E6FA" seqno="8" style="DUID=4B195853;"/>
+					<element geometry="Left=705;Top=166;Right=731;Bottom=200;" subject="EAID_973594F7_E3D6_4eb2_BA32_E4AF174B00DA" seqno="9" style="DUID=89EB6360;LBL=CX=45:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:ALT=0:ROT=0;"/>
+					<element geometry="Left=595;Top=166;Right=665;Bottom=201;" subject="EAID_312BC5B2_0028_4094_BA47_C23789044BA6" seqno="10" style="DUID=87EC44D9;"/>
+					<element geometry="Left=522;Top=167;Right=548;Bottom=201;" subject="EAID_C10C2380_D20A_4e2b_9167_AB2EA0B11037" seqno="11" style="DUID=0102324E;LBL=CX=36:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:ALT=0:ROT=0;"/>
+					<element geometry="Left=435;Top=120;Right=461;Bottom=154;" subject="EAID_FE675707_F17A_4dab_95E0_3FEC333E6F86" seqno="12" style="DUID=920D412E;LBL=CX=42:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:ALT=0:ROT=0;"/>
+					<element geometry="Left=306;Top=255;Right=376;Bottom=290;" subject="EAID_54BCF831_2222_4ea8_906A_278F5B3BB066" seqno="13" style="DUID=0E348569;"/>
+					<element geometry="Left=285;Top=118;Right=355;Bottom=153;" subject="EAID_24AC3DF5_2171_4cf9_9CB9_D06DC96F2695" seqno="14" style="DUID=9F1D86F7;"/>
+					<element geometry="Left=189;Top=257;Right=215;Bottom=291;" subject="EAID_83E8F91F_4332_479c_B68E_6B01D44E4040" seqno="15" style="DUID=122499D6;LBL=CX=36:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:ALT=0:ROT=0;"/>
+					<element geometry="Left=186;Top=122;Right=212;Bottom=156;" subject="EAID_4D2ACFD1_F2F5_43af_AAB2_F3F650F7C835" seqno="16" style="DUID=21BF80AD;LBL=CX=36:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:ALT=0:ROT=0;"/>
+					<element geometry="Left=88;Top=170;Right=114;Bottom=204;" subject="EAID_7B1045AC_F66B_4b66_A56D_D6D55D18BCBD" seqno="17" style="DUID=70E80C09;LBL=CX=45:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:ALT=0:ROT=0;"/>
+					<element geometry="Left=23;Top=174;Right=43;Bottom=194;" subject="EAID_F8F010E2_4C9D_4944_AF01_C92E884EBD62" seqno="18" style="DUID=1C764F57;LBL=CX=61:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:ALT=0:ROT=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=CX=32:CY=13:OX=343:OY=47:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRB=;IRHS=;ILHS=;Path=718:-341$202:-341$;" subject="EAID_12D09457_0B44_461c_B296_266E30D70C37" style="Mode=3;EOID=122499D6;SOID=89EB6360;Color=-1;LWidth=0;TREE=OR;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=CX=30:CY=13:OX=-21:OY=23:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_985F73F9_D628_48b2_8C94_492C1136653F" style="Mode=3;EOID=21BF80AD;SOID=70E80C09;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=CX=32:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_A37F00E1_F1A2_452c_A45C_2256E9BDE66B" style="Mode=3;EOID=122499D6;SOID=70E80C09;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_B0DB5ECF_2C57_4902_814A_60522B9E76FD" style="Mode=3;EOID=9F1D86F7;SOID=21BF80AD;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_5D4C2873_B98F_4b6f_ADB6_59A0ED4FD5B9" style="Mode=3;EOID=0E348569;SOID=122499D6;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_92EB8D7D_3B7D_4ce1_BBCE_EE2C05BA2C0A" style="Mode=3;EOID=920D412E;SOID=9F1D86F7;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=CX=45:CY=13:OX=203:OY=14:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRB=;IRHS=;ILHS=;Path=448:-187$;" subject="EAID_7CCFA40C_BC74_4418_AC22_0C2E95F1BFED" style="Mode=3;EOID=70E80C09;SOID=920D412E;Color=-1;LWidth=0;TREE=OR;Hidden=0;"/>
+					<element geometry="SX=13;SY=4;EX=13;EY=4;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=CX=27:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_51509651_1927_4a56_95CA_C57C38B99802" style="Mode=3;EOID=0102324E;SOID=920D412E;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=13;SY=-14;EX=13;EY=-14;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_FCB5075A_9FE6_45e7_84AA_5BF2F4773DE3" style="Mode=3;EOID=0102324E;SOID=0E348569;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_ADF50D32_1E10_4f1c_951E_FC9350625ACB" style="Mode=3;EOID=87EC44D9;SOID=0102324E;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_D8F2E8A7_402A_4ff9_B278_7D44991440C1" style="Mode=3;EOID=70E80C09;SOID=1C764F57;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=1;$LLB=;LLT=;LMT=;LMB=;LRT=CX=52:CY=13:OX=251:OY=-43:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRB=;IRHS=;ILHS=;Path=718:-77$199:-77$;" subject="EAID_81CBF0FA_0783_479b_9B74_D7E100AC383D" style="Mode=3;EOID=21BF80AD;SOID=89EB6360;Color=-1;LWidth=0;TREE=OR;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=4;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=101:-441$;" subject="EAID_41CC97A9_B33D_4309_BF8D_218D614971A3" style="Mode=3;EOID=70E80C09;SOID=2EA0EE2A;Color=-1;LWidth=0;TREE=OR;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_5805ECA7_D65C_44c9_8CAC_0ED9BA255B0F" style="Mode=3;EOID=4B195853;SOID=89EB6360;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_C0713CEB_FE72_48fe_ACB6_36AEA23365C3" style="Mode=3;EOID=3EA3311B;SOID=4B195853;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_EB2FD722_6640_46ad_8220_A75A15825A56" style="Mode=3;EOID=B194172F;SOID=3EA3311B;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_924913B7_6457_4ad5_AD41_A5A461A61FBC" style="Mode=3;EOID=72F1DE7C;SOID=B194172F;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=CX=72:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_D6DEA662_6978_4e1f_BBB3_86E544B28EC5" style="Mode=3;EOID=813A7475;SOID=72F1DE7C;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=13;EY=-4;EDGE=1;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_8F40D023_8DF1_4253_A382_2AA1205A6EF3" style="Mode=3;EOID=3EA3311B;SOID=813A7475;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_BB2B496F_E1D6_446b_8B7B_AB9A112A46E7" style="Mode=3;EOID=2FA0ACF3;SOID=72F1DE7C;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_2199E4E3_BF1A_4edd_AD55_C4A868F0ECC7" style="Mode=3;EOID=5DBFE258;SOID=2FA0ACF3;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=-12;SY=6;EX=-12;EY=6;EDGE=4;$LLB=;LLT=;LMT=;LMB=;LRT=CX=38:CY=13:OX=61:OY=-29:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_A15FEB81_062F_412f_B88E_AFF8B400ABCB" style="Mode=3;EOID=2EA0EE2A;SOID=3EA3311B;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=4;$LLB=;LLT=;LMT=;LMB=;LRT=CX=70:CY=13:OX=15:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_875D8750_0ED4_424e_B99E_DD1FC6FF1424" style="Mode=3;EOID=2EA0EE2A;SOID=72F1DE7C;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_0B69B83A_DB25_467d_92C4_CF92D1521178" style="Mode=3;EOID=89EB6360;SOID=87EC44D9;Color=-1;LWidth=0;Hidden=0;"/>
+				</elements>
+			</diagram>
+		</diagrams>
+	</xmi:Extension>
+</xmi:XMI>

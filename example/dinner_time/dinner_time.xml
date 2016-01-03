@@ -1,0 +1,822 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<xmi:XMI xmi:version="2.1" xmlns:uml="http://schema.omg.org/spec/UML/2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:thecustomprofile="http://www.sparxsystems.com/profiles/thecustomprofile/1.0">
+	<xmi:Documentation exporter="Enterprise Architect" exporterVersion="6.5"/>
+	<uml:Model xmi:type="uml:Model" name="EA_Model" visibility="public">
+		<packagedElement xmi:type="uml:Package" xmi:id="EAPK_5996096B_48AA_4b25_AF13_66E53D7DE957" name="Model" visibility="public">
+			<packagedElement xmi:type="uml:Package" xmi:id="EAPK_4B94F1C2_5F44_4692_BA5E_C0E8E56A7D4E" name="dinner" visibility="public">
+				<packagedElement xmi:type="uml:Activity" xmi:id="EAID_AC000001_5F44_4692_BA5E_C0E8E56A7D4E" name="EA_Activity1" visibility="public">
+					<node xmi:type="uml:DecisionNode" xmi:id="EAID_1672F769_73C0_49b9_988D_A6349E5B8ED0" visibility="public">
+						<incoming xmi:idref="EAID_0F0A9204_71E6_486c_A648_7D6B30A7BA73"/>
+						<outgoing xmi:idref="EAID_930F0324_A2FC_4a5a_A195_FAEFBEB49345"/>
+						<outgoing xmi:idref="EAID_8B5CF826_7834_40a5_9600_125FE2FCB55E"/>
+					</node>
+					<edge xmi:type="uml:ControlFlow" xmi:id="EAID_8B5CF826_7834_40a5_9600_125FE2FCB55E" visibility="public" source="EAID_1672F769_73C0_49b9_988D_A6349E5B8ED0" target="EAID_80B90232_8638_4174_A403_F27AF8AE7193">
+						<guard xmi:type="uml:OpaqueExpression" xmi:id="EAID_OE000000_7834_40a5_9600_125FE2FCB55E" body="do not eat out"/>
+					</edge>
+					<edge xmi:type="uml:ControlFlow" xmi:id="EAID_930F0324_A2FC_4a5a_A195_FAEFBEB49345" visibility="public" source="EAID_1672F769_73C0_49b9_988D_A6349E5B8ED0" target="EAID_D8DCEB84_F4DE_484d_B6CD_CEE8CD4CA119">
+						<guard xmi:type="uml:OpaqueExpression" xmi:id="EAID_OE000000_A2FC_4a5a_A195_FAEFBEB49345" body="eat out"/>
+					</edge>
+					<node xmi:type="uml:ActivityFinalNode" xmi:id="EAID_80B90232_8638_4174_A403_F27AF8AE7193" name="ActivityFinal" visibility="public">
+						<incoming xmi:idref="EAID_8B5CF826_7834_40a5_9600_125FE2FCB55E"/>
+						<incoming xmi:idref="EAID_041CF1EE_95B3_4b85_AC62_9C97830156D4"/>
+					</node>
+					<node xmi:type="uml:InitialNode" xmi:id="EAID_58C586D2_17F1_44dc_BD8C_7F52F0188F41" name="ActivityInitial" visibility="public">
+						<outgoing xmi:idref="EAID_7C181669_2882_426a_B84C_DB812F171EB9"/>
+					</node>
+					<edge xmi:type="uml:ControlFlow" xmi:id="EAID_7C181669_2882_426a_B84C_DB812F171EB9" visibility="public" source="EAID_58C586D2_17F1_44dc_BD8C_7F52F0188F41" target="EAID_0FD1205A_9E28_488c_98C0_F6EA6A7FF0BE"/>
+					<node xmi:type="uml:Action" xmi:id="EAID_0FD1205A_9E28_488c_98C0_F6EA6A7FF0BE" name="choose dinner" visibility="public">
+						<incoming xmi:idref="EAID_7C181669_2882_426a_B84C_DB812F171EB9"/>
+						<outgoing xmi:idref="EAID_74C68447_B3D5_4e35_9A59_2C2C7471DED7"/>
+						<outgoing xmi:idref="EAID_0F0A9204_71E6_486c_A648_7D6B30A7BA73"/>
+					</node>
+					<edge xmi:type="uml:ControlFlow" xmi:id="EAID_0F0A9204_71E6_486c_A648_7D6B30A7BA73" visibility="public" source="EAID_0FD1205A_9E28_488c_98C0_F6EA6A7FF0BE" target="EAID_1672F769_73C0_49b9_988D_A6349E5B8ED0">
+						<guard xmi:type="uml:OpaqueExpression" xmi:id="EAID_OE000000_71E6_486c_A648_7D6B30A7BA73" body="do not eat in"/>
+					</edge>
+					<edge xmi:type="uml:ControlFlow" xmi:id="EAID_74C68447_B3D5_4e35_9A59_2C2C7471DED7" visibility="public" source="EAID_0FD1205A_9E28_488c_98C0_F6EA6A7FF0BE" target="EAID_8C401D46_6C07_423c_A8BC_949EFE8FA954">
+						<guard xmi:type="uml:OpaqueExpression" xmi:id="EAID_OE000000_B3D5_4e35_9A59_2C2C7471DED7" body="eat in"/>
+					</edge>
+					<node xmi:type="uml:Action" xmi:id="EAID_6CD4E49F_BFC0_416b_9F98_1E393942007B" name="cook" visibility="public">
+						<incoming xmi:idref="EAID_146155E3_08F3_4bc6_9176_8F2C97C09550"/>
+						<outgoing xmi:idref="EAID_4C060EFA_7532_4d7a_B724_84C47C3C127C"/>
+					</node>
+					<edge xmi:type="uml:ControlFlow" xmi:id="EAID_4C060EFA_7532_4d7a_B724_84C47C3C127C" visibility="public" source="EAID_6CD4E49F_BFC0_416b_9F98_1E393942007B" target="EAID_710B0175_F06B_43cd_A1F1_5710389DA03F"/>
+					<node xmi:type="uml:Action" xmi:id="EAID_AEBE37B6_8EBE_446a_B908_A3E76603CB7A" name="eat" visibility="public">
+						<incoming xmi:idref="EAID_51BAEC8B_6644_480d_9710_58F16C581291"/>
+						<incoming xmi:idref="EAID_0DD710A2_2BEF_4002_AC1C_C386BF10AA7F"/>
+						<outgoing xmi:idref="EAID_041CF1EE_95B3_4b85_AC62_9C97830156D4"/>
+					</node>
+					<edge xmi:type="uml:ControlFlow" xmi:id="EAID_041CF1EE_95B3_4b85_AC62_9C97830156D4" visibility="public" source="EAID_AEBE37B6_8EBE_446a_B908_A3E76603CB7A" target="EAID_80B90232_8638_4174_A403_F27AF8AE7193"/>
+					<node xmi:type="uml:Action" xmi:id="EAID_29FBCC01_3B25_4259_8C61_DB918343AF1A" name="find recipe" visibility="public">
+						<incoming xmi:idref="EAID_32D65D6A_238F_42c2_9E71_AEBB67E08C71"/>
+						<outgoing xmi:idref="EAID_6448E77A_2C94_4bd4_9CAA_76261C2183B2"/>
+					</node>
+					<edge xmi:type="uml:ControlFlow" xmi:id="EAID_6448E77A_2C94_4bd4_9CAA_76261C2183B2" visibility="public" source="EAID_29FBCC01_3B25_4259_8C61_DB918343AF1A" target="EAID_3D19FA29_BF8E_452b_A9F5_3BFECDDCD83C"/>
+					<node xmi:type="uml:Action" xmi:id="EAID_3D19FA29_BF8E_452b_A9F5_3BFECDDCD83C" name="gather ingredients" visibility="public">
+						<incoming xmi:idref="EAID_6448E77A_2C94_4bd4_9CAA_76261C2183B2"/>
+						<outgoing xmi:idref="EAID_146155E3_08F3_4bc6_9176_8F2C97C09550"/>
+					</node>
+					<edge xmi:type="uml:ControlFlow" xmi:id="EAID_146155E3_08F3_4bc6_9176_8F2C97C09550" visibility="public" source="EAID_3D19FA29_BF8E_452b_A9F5_3BFECDDCD83C" target="EAID_6CD4E49F_BFC0_416b_9F98_1E393942007B"/>
+					<node xmi:type="uml:Action" xmi:id="EAID_D8DCEB84_F4DE_484d_B6CD_CEE8CD4CA119" name="go to restaurant" visibility="public">
+						<incoming xmi:idref="EAID_930F0324_A2FC_4a5a_A195_FAEFBEB49345"/>
+						<outgoing xmi:idref="EAID_0DD710A2_2BEF_4002_AC1C_C386BF10AA7F"/>
+					</node>
+					<edge xmi:type="uml:ControlFlow" xmi:id="EAID_0DD710A2_2BEF_4002_AC1C_C386BF10AA7F" visibility="public" source="EAID_D8DCEB84_F4DE_484d_B6CD_CEE8CD4CA119" target="EAID_AEBE37B6_8EBE_446a_B908_A3E76603CB7A"/>
+					<node xmi:type="uml:Action" xmi:id="EAID_A77A3E3F_92B3_4a85_9155_31A1EC50A416" name="set table" visibility="public">
+						<incoming xmi:idref="EAID_94A9B539_E0DE_41d2_B741_30BF99983715"/>
+						<outgoing xmi:idref="EAID_FBEB7E0A_34B0_435e_9CD9_280346B6C540"/>
+					</node>
+					<edge xmi:type="uml:ControlFlow" xmi:id="EAID_FBEB7E0A_34B0_435e_9CD9_280346B6C540" visibility="public" source="EAID_A77A3E3F_92B3_4a85_9155_31A1EC50A416" target="EAID_710B0175_F06B_43cd_A1F1_5710389DA03F"/>
+					<node xmi:type="uml:ForkNode" xmi:id="EAID_710B0175_F06B_43cd_A1F1_5710389DA03F" visibility="public">
+						<incoming xmi:idref="EAID_FBEB7E0A_34B0_435e_9CD9_280346B6C540"/>
+						<incoming xmi:idref="EAID_4C060EFA_7532_4d7a_B724_84C47C3C127C"/>
+						<outgoing xmi:idref="EAID_51BAEC8B_6644_480d_9710_58F16C581291"/>
+					</node>
+					<edge xmi:type="uml:ControlFlow" xmi:id="EAID_51BAEC8B_6644_480d_9710_58F16C581291" visibility="public" source="EAID_710B0175_F06B_43cd_A1F1_5710389DA03F" target="EAID_AEBE37B6_8EBE_446a_B908_A3E76603CB7A"/>
+					<node xmi:type="uml:ForkNode" xmi:id="EAID_8C401D46_6C07_423c_A8BC_949EFE8FA954" visibility="public">
+						<incoming xmi:idref="EAID_74C68447_B3D5_4e35_9A59_2C2C7471DED7"/>
+						<outgoing xmi:idref="EAID_94A9B539_E0DE_41d2_B741_30BF99983715"/>
+						<outgoing xmi:idref="EAID_32D65D6A_238F_42c2_9E71_AEBB67E08C71"/>
+					</node>
+					<edge xmi:type="uml:ControlFlow" xmi:id="EAID_32D65D6A_238F_42c2_9E71_AEBB67E08C71" visibility="public" source="EAID_8C401D46_6C07_423c_A8BC_949EFE8FA954" target="EAID_29FBCC01_3B25_4259_8C61_DB918343AF1A"/>
+					<edge xmi:type="uml:ControlFlow" xmi:id="EAID_94A9B539_E0DE_41d2_B741_30BF99983715" visibility="public" source="EAID_8C401D46_6C07_423c_A8BC_949EFE8FA954" target="EAID_A77A3E3F_92B3_4a85_9155_31A1EC50A416"/>
+				</packagedElement>
+			</packagedElement>
+		</packagedElement>
+		<thecustomprofile:time base_Action="EAID_6CD4E49F_BFC0_416b_9F98_1E393942007B" time="50s"/>
+		<thecustomprofile:time base_Action="EAID_29FBCC01_3B25_4259_8C61_DB918343AF1A" time="20s"/>
+		<thecustomprofile:time base_Action="EAID_3D19FA29_BF8E_452b_A9F5_3BFECDDCD83C" time="20s"/>
+		<thecustomprofile:time base_Action="EAID_A77A3E3F_92B3_4a85_9155_31A1EC50A416" time="45s"/>
+	</uml:Model>
+	<xmi:Extension extender="Enterprise Architect" extenderID="6.5">
+		<elements>
+			<element xmi:idref="EAPK_5996096B_48AA_4b25_AF13_66E53D7DE957">
+				<packageproperties/>
+				<paths/>
+				<times created="2012-04-17 00:00:00" modified="2012-04-17 00:00:00"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" usedtd="FALSE" logxml="FALSE" packageFlags="isModel=1;"/>
+			</element>
+			<element xmi:idref="EAPK_4B94F1C2_5F44_4692_BA5E_C0E8E56A7D4E" xmi:type="uml:Package" name="dinner" scope="public">
+				<model package2="EAID_4B94F1C2_5F44_4692_BA5E_C0E8E56A7D4E" package="EAPK_5996096B_48AA_4b25_AF13_66E53D7DE957" tpos="0" ea_localid="2" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Kai" version="1.0" phase="1.0" created="2015-11-13 13:32:23" modified="2015-11-13 13:32:23" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Model"/>
+				<packageproperties version="1.0"/>
+				<paths/>
+				<times created="2015-11-13 00:00:00" modified="2015-11-13 00:00:00"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" usedtd="FALSE" logxml="FALSE" packageFlags="isModel=1;VICON=3;"/>
+			</element>
+			<element xmi:idref="EAID_1672F769_73C0_49b9_988D_A6349E5B8ED0" xmi:type="uml:Decision" scope="public">
+				<model package="EAPK_4B94F1C2_5F44_4692_BA5E_C0E8E56A7D4E" tpos="0" ea_localid="11" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Decision" nType="0" scope="public"/>
+				<project author="Kai" version="1.0" phase="1.0" created="2015-11-13 13:34:53" modified="2015-11-13 13:34:53" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="dinner"/>
+				<links>
+					<ControlFlow xmi:id="EAID_8B5CF826_7834_40a5_9600_125FE2FCB55E" start="EAID_1672F769_73C0_49b9_988D_A6349E5B8ED0" end="EAID_80B90232_8638_4174_A403_F27AF8AE7193"/>
+					<ControlFlow xmi:id="EAID_930F0324_A2FC_4a5a_A195_FAEFBEB49345" start="EAID_1672F769_73C0_49b9_988D_A6349E5B8ED0" end="EAID_D8DCEB84_F4DE_484d_B6CD_CEE8CD4CA119"/>
+					<ControlFlow xmi:id="EAID_0F0A9204_71E6_486c_A648_7D6B30A7BA73" start="EAID_0FD1205A_9E28_488c_98C0_F6EA6A7FF0BE" end="EAID_1672F769_73C0_49b9_988D_A6349E5B8ED0"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_80B90232_8638_4174_A403_F27AF8AE7193" xmi:type="uml:StateNode" name="ActivityFinal" scope="public">
+				<model package="EAPK_4B94F1C2_5F44_4692_BA5E_C0E8E56A7D4E" tpos="0" ea_localid="14" ea_eleType="element"/>
+				<properties isSpecification="false" sType="StateNode" nType="101" scope="public"/>
+				<project author="Kai" version="1.0" phase="1.0" created="2015-11-13 13:35:47" modified="2015-11-13 13:35:47" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="dinner"/>
+				<links>
+					<ControlFlow xmi:id="EAID_041CF1EE_95B3_4b85_AC62_9C97830156D4" start="EAID_AEBE37B6_8EBE_446a_B908_A3E76603CB7A" end="EAID_80B90232_8638_4174_A403_F27AF8AE7193"/>
+					<ControlFlow xmi:id="EAID_8B5CF826_7834_40a5_9600_125FE2FCB55E" start="EAID_1672F769_73C0_49b9_988D_A6349E5B8ED0" end="EAID_80B90232_8638_4174_A403_F27AF8AE7193"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_58C586D2_17F1_44dc_BD8C_7F52F0188F41" xmi:type="uml:StateNode" name="ActivityInitial" scope="public">
+				<model package="EAPK_4B94F1C2_5F44_4692_BA5E_C0E8E56A7D4E" tpos="0" ea_localid="2" ea_eleType="element"/>
+				<properties isSpecification="false" sType="StateNode" nType="100" scope="public"/>
+				<project author="Kai" version="1.0" phase="1.0" created="2015-11-13 13:32:33" modified="2015-11-13 13:32:33" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="dinner"/>
+				<links>
+					<ControlFlow xmi:id="EAID_7C181669_2882_426a_B84C_DB812F171EB9" start="EAID_58C586D2_17F1_44dc_BD8C_7F52F0188F41" end="EAID_0FD1205A_9E28_488c_98C0_F6EA6A7FF0BE"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_0FD1205A_9E28_488c_98C0_F6EA6A7FF0BE" xmi:type="uml:Action" name="choose dinner" scope="public">
+				<model package="EAPK_4B94F1C2_5F44_4692_BA5E_C0E8E56A7D4E" tpos="0" ea_localid="3" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Action" nType="0" scope="public"/>
+				<project author="Kai" version="1.0" phase="1.0" created="2015-11-13 13:32:39" modified="2015-11-13 13:32:47" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;" object_style="ShowBeh=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="dinner"/>
+				<links>
+					<ControlFlow xmi:id="EAID_0F0A9204_71E6_486c_A648_7D6B30A7BA73" start="EAID_0FD1205A_9E28_488c_98C0_F6EA6A7FF0BE" end="EAID_1672F769_73C0_49b9_988D_A6349E5B8ED0"/>
+					<ControlFlow xmi:id="EAID_74C68447_B3D5_4e35_9A59_2C2C7471DED7" start="EAID_0FD1205A_9E28_488c_98C0_F6EA6A7FF0BE" end="EAID_8C401D46_6C07_423c_A8BC_949EFE8FA954"/>
+					<ControlFlow xmi:id="EAID_7C181669_2882_426a_B84C_DB812F171EB9" start="EAID_58C586D2_17F1_44dc_BD8C_7F52F0188F41" end="EAID_0FD1205A_9E28_488c_98C0_F6EA6A7FF0BE"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_6CD4E49F_BFC0_416b_9F98_1E393942007B" xmi:type="uml:Action" name="cook" scope="public">
+				<model package="EAPK_4B94F1C2_5F44_4692_BA5E_C0E8E56A7D4E" tpos="0" ea_localid="8" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Action" nType="0" scope="public"/>
+				<project author="Kai" version="1.0" phase="1.0" created="2015-11-13 13:33:47" modified="2015-11-13 13:33:52" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;" object_style="ShowBeh=0;"/>
+				<tags>
+					<tag xmi:id="EAID_EC76E769_C50F_4b57_B4D3_64702384155F" name="time" value="50s" modelElement="EAID_6CD4E49F_BFC0_416b_9F98_1E393942007B"/>
+				</tags>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="dinner"/>
+				<links>
+					<ControlFlow xmi:id="EAID_4C060EFA_7532_4d7a_B724_84C47C3C127C" start="EAID_6CD4E49F_BFC0_416b_9F98_1E393942007B" end="EAID_710B0175_F06B_43cd_A1F1_5710389DA03F"/>
+					<ControlFlow xmi:id="EAID_146155E3_08F3_4bc6_9176_8F2C97C09550" start="EAID_3D19FA29_BF8E_452b_A9F5_3BFECDDCD83C" end="EAID_6CD4E49F_BFC0_416b_9F98_1E393942007B"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_AEBE37B6_8EBE_446a_B908_A3E76603CB7A" xmi:type="uml:Action" name="eat" scope="public">
+				<model package="EAPK_4B94F1C2_5F44_4692_BA5E_C0E8E56A7D4E" tpos="0" ea_localid="13" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Action" nType="0" scope="public"/>
+				<project author="Kai" version="1.0" phase="1.0" created="2015-11-13 13:35:26" modified="2015-11-13 13:35:30" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;" object_style="ShowBeh=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="dinner"/>
+				<links>
+					<ControlFlow xmi:id="EAID_041CF1EE_95B3_4b85_AC62_9C97830156D4" start="EAID_AEBE37B6_8EBE_446a_B908_A3E76603CB7A" end="EAID_80B90232_8638_4174_A403_F27AF8AE7193"/>
+					<ControlFlow xmi:id="EAID_0DD710A2_2BEF_4002_AC1C_C386BF10AA7F" start="EAID_D8DCEB84_F4DE_484d_B6CD_CEE8CD4CA119" end="EAID_AEBE37B6_8EBE_446a_B908_A3E76603CB7A"/>
+					<ControlFlow xmi:id="EAID_51BAEC8B_6644_480d_9710_58F16C581291" start="EAID_710B0175_F06B_43cd_A1F1_5710389DA03F" end="EAID_AEBE37B6_8EBE_446a_B908_A3E76603CB7A"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_29FBCC01_3B25_4259_8C61_DB918343AF1A" xmi:type="uml:Action" name="find recipe" scope="public">
+				<model package="EAPK_4B94F1C2_5F44_4692_BA5E_C0E8E56A7D4E" tpos="0" ea_localid="6" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Action" nType="0" scope="public"/>
+				<project author="Kai" version="1.0" phase="1.0" created="2015-11-13 13:33:17" modified="2015-11-13 13:33:24" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;" object_style="ShowBeh=0;"/>
+				<tags>
+					<tag xmi:id="EAID_EC3474A6_3C3A_4e5c_A738_6ED490B4F2DB" name="time" value="20s" modelElement="EAID_29FBCC01_3B25_4259_8C61_DB918343AF1A"/>
+				</tags>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="dinner"/>
+				<links>
+					<ControlFlow xmi:id="EAID_6448E77A_2C94_4bd4_9CAA_76261C2183B2" start="EAID_29FBCC01_3B25_4259_8C61_DB918343AF1A" end="EAID_3D19FA29_BF8E_452b_A9F5_3BFECDDCD83C"/>
+					<ControlFlow xmi:id="EAID_32D65D6A_238F_42c2_9E71_AEBB67E08C71" start="EAID_8C401D46_6C07_423c_A8BC_949EFE8FA954" end="EAID_29FBCC01_3B25_4259_8C61_DB918343AF1A"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_3D19FA29_BF8E_452b_A9F5_3BFECDDCD83C" xmi:type="uml:Action" name="gather ingredients" scope="public">
+				<model package="EAPK_4B94F1C2_5F44_4692_BA5E_C0E8E56A7D4E" tpos="0" ea_localid="7" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Action" nType="0" scope="public"/>
+				<project author="Kai" version="1.0" phase="1.0" created="2015-11-13 13:33:30" modified="2015-11-13 13:33:40" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;" object_style="ShowBeh=0;"/>
+				<tags>
+					<tag xmi:id="EAID_B52EBCBB_30F6_4931_B204_073B973637D7" name="time" value="20s" modelElement="EAID_3D19FA29_BF8E_452b_A9F5_3BFECDDCD83C"/>
+				</tags>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="dinner"/>
+				<links>
+					<ControlFlow xmi:id="EAID_146155E3_08F3_4bc6_9176_8F2C97C09550" start="EAID_3D19FA29_BF8E_452b_A9F5_3BFECDDCD83C" end="EAID_6CD4E49F_BFC0_416b_9F98_1E393942007B"/>
+					<ControlFlow xmi:id="EAID_6448E77A_2C94_4bd4_9CAA_76261C2183B2" start="EAID_29FBCC01_3B25_4259_8C61_DB918343AF1A" end="EAID_3D19FA29_BF8E_452b_A9F5_3BFECDDCD83C"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_D8DCEB84_F4DE_484d_B6CD_CEE8CD4CA119" xmi:type="uml:Action" name="go to restaurant" scope="public">
+				<model package="EAPK_4B94F1C2_5F44_4692_BA5E_C0E8E56A7D4E" tpos="0" ea_localid="12" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Action" nType="0" scope="public"/>
+				<project author="Kai" version="1.0" phase="1.0" created="2015-11-13 13:35:07" modified="2015-11-13 13:35:14" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;" object_style="ShowBeh=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="dinner"/>
+				<links>
+					<ControlFlow xmi:id="EAID_0DD710A2_2BEF_4002_AC1C_C386BF10AA7F" start="EAID_D8DCEB84_F4DE_484d_B6CD_CEE8CD4CA119" end="EAID_AEBE37B6_8EBE_446a_B908_A3E76603CB7A"/>
+					<ControlFlow xmi:id="EAID_930F0324_A2FC_4a5a_A195_FAEFBEB49345" start="EAID_1672F769_73C0_49b9_988D_A6349E5B8ED0" end="EAID_D8DCEB84_F4DE_484d_B6CD_CEE8CD4CA119"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_A77A3E3F_92B3_4a85_9155_31A1EC50A416" xmi:type="uml:Action" name="set table" scope="public">
+				<model package="EAPK_4B94F1C2_5F44_4692_BA5E_C0E8E56A7D4E" tpos="0" ea_localid="9" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Action" nType="0" scope="public"/>
+				<project author="Kai" version="1.0" phase="1.0" created="2015-11-13 13:34:05" modified="2015-11-13 13:34:10" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;" object_style="ShowBeh=0;"/>
+				<tags>
+					<tag xmi:id="EAID_5FC4AD4C_34EC_47e2_9F47_0B63D5A03D44" name="time" value="45s" modelElement="EAID_A77A3E3F_92B3_4a85_9155_31A1EC50A416"/>
+				</tags>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="dinner"/>
+				<links>
+					<ControlFlow xmi:id="EAID_FBEB7E0A_34B0_435e_9CD9_280346B6C540" start="EAID_A77A3E3F_92B3_4a85_9155_31A1EC50A416" end="EAID_710B0175_F06B_43cd_A1F1_5710389DA03F"/>
+					<ControlFlow xmi:id="EAID_94A9B539_E0DE_41d2_B741_30BF99983715" start="EAID_8C401D46_6C07_423c_A8BC_949EFE8FA954" end="EAID_A77A3E3F_92B3_4a85_9155_31A1EC50A416"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_710B0175_F06B_43cd_A1F1_5710389DA03F" xmi:type="uml:Synchronization" scope="public">
+				<model package="EAPK_4B94F1C2_5F44_4692_BA5E_C0E8E56A7D4E" tpos="0" ea_localid="10" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Synchronization" nType="0" scope="public"/>
+				<project author="Kai" version="1.0" phase="1.0" created="2015-11-13 13:34:15" modified="2015-11-13 13:34:15" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="dinner"/>
+				<links>
+					<ControlFlow xmi:id="EAID_51BAEC8B_6644_480d_9710_58F16C581291" start="EAID_710B0175_F06B_43cd_A1F1_5710389DA03F" end="EAID_AEBE37B6_8EBE_446a_B908_A3E76603CB7A"/>
+					<ControlFlow xmi:id="EAID_4C060EFA_7532_4d7a_B724_84C47C3C127C" start="EAID_6CD4E49F_BFC0_416b_9F98_1E393942007B" end="EAID_710B0175_F06B_43cd_A1F1_5710389DA03F"/>
+					<ControlFlow xmi:id="EAID_FBEB7E0A_34B0_435e_9CD9_280346B6C540" start="EAID_A77A3E3F_92B3_4a85_9155_31A1EC50A416" end="EAID_710B0175_F06B_43cd_A1F1_5710389DA03F"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_8C401D46_6C07_423c_A8BC_949EFE8FA954" xmi:type="uml:Synchronization" scope="public">
+				<model package="EAPK_4B94F1C2_5F44_4692_BA5E_C0E8E56A7D4E" tpos="0" ea_localid="4" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Synchronization" nType="0" scope="public"/>
+				<project author="Kai" version="1.0" phase="1.0" created="2015-11-13 13:32:52" modified="2015-11-13 13:32:52" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="dinner"/>
+				<links>
+					<ControlFlow xmi:id="EAID_32D65D6A_238F_42c2_9E71_AEBB67E08C71" start="EAID_8C401D46_6C07_423c_A8BC_949EFE8FA954" end="EAID_29FBCC01_3B25_4259_8C61_DB918343AF1A"/>
+					<ControlFlow xmi:id="EAID_94A9B539_E0DE_41d2_B741_30BF99983715" start="EAID_8C401D46_6C07_423c_A8BC_949EFE8FA954" end="EAID_A77A3E3F_92B3_4a85_9155_31A1EC50A416"/>
+					<ControlFlow xmi:id="EAID_74C68447_B3D5_4e35_9A59_2C2C7471DED7" start="EAID_0FD1205A_9E28_488c_98C0_F6EA6A7FF0BE" end="EAID_8C401D46_6C07_423c_A8BC_949EFE8FA954"/>
+				</links>
+			</element>
+		</elements>
+		<connectors>
+			<connector xmi:idref="EAID_8B5CF826_7834_40a5_9600_125FE2FCB55E">
+				<source xmi:idref="EAID_1672F769_73C0_49b9_988D_A6349E5B8ED0">
+					<model ea_localid="11" type="Decision"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_80B90232_8638_4174_A403_F27AF8AE7193">
+					<model ea_localid="14" type="StateNode" name="ActivityFinal"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="15"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels mb="[do not eat out]"/>
+				<extendedProperties virtualInheritance="0" privatedata2="do not eat out"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_930F0324_A2FC_4a5a_A195_FAEFBEB49345">
+				<source xmi:idref="EAID_1672F769_73C0_49b9_988D_A6349E5B8ED0">
+					<model ea_localid="11" type="Decision"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_D8DCEB84_F4DE_484d_B6CD_CEE8CD4CA119">
+					<model ea_localid="12" type="Action" name="go to restaurant"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="10"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels mb="[eat out]"/>
+				<extendedProperties virtualInheritance="0" privatedata2="eat out"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_0F0A9204_71E6_486c_A648_7D6B30A7BA73">
+				<source xmi:idref="EAID_0FD1205A_9E28_488c_98C0_F6EA6A7FF0BE">
+					<model ea_localid="3" type="Action" name="choose dinner"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_1672F769_73C0_49b9_988D_A6349E5B8ED0">
+					<model ea_localid="11" type="Decision"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="9"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels mb="[do not eat in]"/>
+				<extendedProperties virtualInheritance="0" privatedata2="do not eat in"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_041CF1EE_95B3_4b85_AC62_9C97830156D4">
+				<source xmi:idref="EAID_AEBE37B6_8EBE_446a_B908_A3E76603CB7A">
+					<model ea_localid="13" type="Action" name="eat"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_80B90232_8638_4174_A403_F27AF8AE7193">
+					<model ea_localid="14" type="StateNode" name="ActivityFinal"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="14"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_7C181669_2882_426a_B84C_DB812F171EB9">
+				<source xmi:idref="EAID_58C586D2_17F1_44dc_BD8C_7F52F0188F41">
+					<model ea_localid="2" type="StateNode" name="ActivityInitial"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_0FD1205A_9E28_488c_98C0_F6EA6A7FF0BE">
+					<model ea_localid="3" type="Action" name="choose dinner"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="7"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_74C68447_B3D5_4e35_9A59_2C2C7471DED7">
+				<source xmi:idref="EAID_0FD1205A_9E28_488c_98C0_F6EA6A7FF0BE">
+					<model ea_localid="3" type="Action" name="choose dinner"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_8C401D46_6C07_423c_A8BC_949EFE8FA954">
+					<model ea_localid="4" type="Synchronization"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="8"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels mb="[eat in]"/>
+				<extendedProperties virtualInheritance="0" privatedata2="eat in"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_4C060EFA_7532_4d7a_B724_84C47C3C127C">
+				<source xmi:idref="EAID_6CD4E49F_BFC0_416b_9F98_1E393942007B">
+					<model ea_localid="8" type="Action" name="cook"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_710B0175_F06B_43cd_A1F1_5710389DA03F">
+					<model ea_localid="10" type="Synchronization"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="4"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_146155E3_08F3_4bc6_9176_8F2C97C09550">
+				<source xmi:idref="EAID_3D19FA29_BF8E_452b_A9F5_3BFECDDCD83C">
+					<model ea_localid="7" type="Action" name="gather ingredients"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_6CD4E49F_BFC0_416b_9F98_1E393942007B">
+					<model ea_localid="8" type="Action" name="cook"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="3"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_0DD710A2_2BEF_4002_AC1C_C386BF10AA7F">
+				<source xmi:idref="EAID_D8DCEB84_F4DE_484d_B6CD_CEE8CD4CA119">
+					<model ea_localid="12" type="Action" name="go to restaurant"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_AEBE37B6_8EBE_446a_B908_A3E76603CB7A">
+					<model ea_localid="13" type="Action" name="eat"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="11"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_51BAEC8B_6644_480d_9710_58F16C581291">
+				<source xmi:idref="EAID_710B0175_F06B_43cd_A1F1_5710389DA03F">
+					<model ea_localid="10" type="Synchronization"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_AEBE37B6_8EBE_446a_B908_A3E76603CB7A">
+					<model ea_localid="13" type="Action" name="eat"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="12"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_6448E77A_2C94_4bd4_9CAA_76261C2183B2">
+				<source xmi:idref="EAID_29FBCC01_3B25_4259_8C61_DB918343AF1A">
+					<model ea_localid="6" type="Action" name="find recipe"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_3D19FA29_BF8E_452b_A9F5_3BFECDDCD83C">
+					<model ea_localid="7" type="Action" name="gather ingredients"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="2"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_32D65D6A_238F_42c2_9E71_AEBB67E08C71">
+				<source xmi:idref="EAID_8C401D46_6C07_423c_A8BC_949EFE8FA954">
+					<model ea_localid="4" type="Synchronization"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_29FBCC01_3B25_4259_8C61_DB918343AF1A">
+					<model ea_localid="6" type="Action" name="find recipe"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="1"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_FBEB7E0A_34B0_435e_9CD9_280346B6C540">
+				<source xmi:idref="EAID_A77A3E3F_92B3_4a85_9155_31A1EC50A416">
+					<model ea_localid="9" type="Action" name="set table"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_710B0175_F06B_43cd_A1F1_5710389DA03F">
+					<model ea_localid="10" type="Synchronization"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="6"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_94A9B539_E0DE_41d2_B741_30BF99983715">
+				<source xmi:idref="EAID_8C401D46_6C07_423c_A8BC_949EFE8FA954">
+					<model ea_localid="4" type="Synchronization"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_A77A3E3F_92B3_4a85_9155_31A1EC50A416">
+					<model ea_localid="9" type="Action" name="set table"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="5"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+		</connectors>
+		<primitivetypes>
+			<packagedElement xmi:type="uml:Package" xmi:id="EAPrimitiveTypesPackage" name="EA_PrimitiveTypes_Package" visibility="public"/>
+		</primitivetypes>
+		<profiles>
+			<uml:Profile xmi:version="2.1" xmlns:uml="http://schema.omg.org/spec/UML/2.1/" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmi:id="thecustomprofile" nsPrefix="thecustomprofile" name="thecustomprofile" metamodelReference="mmref01">
+				<ownedComment xmi:type="uml:Comment" xmi:id="comment01" annotatedElement="thecustomprofile">
+					<body> Version:1.0</body>
+				</ownedComment>
+				<packageImport xmi:id="mmref01">
+					<importedPackage href="http://schema.omg.org/spec/UML/2.1/"/>
+				</packageImport>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="time" name="time">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="time-base_Action" name="base_Action" association="Action_time">
+						<type href="http://schema.omg.org/spec/UML/2.1/Action"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="time-time" name="time">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Action_time" name="A_Action_time" memberEnd="extension_time time-base_Action">
+					<ownedEnd xmi:id="extension_time" name="extension_time" type="time" isComposite="true" lower="0" upper="1" memberEnd="extension_time time-base_Action"/>
+				</packagedElement>
+			</uml:Profile>
+		</profiles>
+		<diagrams>
+			<diagram xmi:id="EAID_65CD76A8_27F2_47df_9AAC_C83BA59F1695">
+				<model package="EAPK_4B94F1C2_5F44_4692_BA5E_C0E8E56A7D4E" localID="1" owner="EAPK_4B94F1C2_5F44_4692_BA5E_C0E8E56A7D4E"/>
+				<properties name="dinner" type="Activity"/>
+				<project author="Kai" version="1.0" created="2015-11-13 13:32:28" modified="2015-11-13 13:38:19"/>
+				<style1 value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=1;PPgs.cy=1;DocSize.cx=780;DocSize.cy=1134;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=9;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
+				<style2 value="ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;ProfileData=;MDGDgm=;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;SaveTag=699027B2;"/>
+				<swimlanes value="locked=false;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;hl=1;cls=0;"/>
+				<matrixitems value="locked=false;matrixactive=false;swimlanesactive=true;kanbanactive=false;width=1;"/>
+				<extendedProperties/>
+				<elements>
+					<element geometry="Left=307;Top=640;Right=327;Bottom=660;" subject="EAID_80B90232_8638_4174_A403_F27AF8AE7193" seqno="1" style="DUID=A850C8DB;LBL=CX=58:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:ALT=0:ROT=0;"/>
+					<element geometry="Left=260;Top=570;Right=330;Bottom=605;" subject="EAID_AEBE37B6_8EBE_446a_B908_A3E76603CB7A" seqno="2" style="DUID=A4DEF662;"/>
+					<element geometry="Left=245;Top=274;Right=315;Bottom=309;" subject="EAID_D8DCEB84_F4DE_484d_B6CD_CEE8CD4CA119" seqno="3" style="DUID=467CE35C;"/>
+					<element geometry="Left=282;Top=171;Right=308;Bottom=205;" subject="EAID_1672F769_73C0_49b9_988D_A6349E5B8ED0" seqno="4" style="DUID=59EF6911;"/>
+					<element geometry="Left=116;Top=533;Right=156;Bottom=539;" subject="EAID_710B0175_F06B_43cd_A1F1_5710389DA03F" seqno="5" style="DUID=18EFB5E5;"/>
+					<element geometry="Left=169;Top=384;Right=239;Bottom=419;" subject="EAID_A77A3E3F_92B3_4a85_9155_31A1EC50A416" seqno="6" style="DUID=8219FCF9;"/>
+					<element geometry="Left=31;Top=453;Right=101;Bottom=488;" subject="EAID_6CD4E49F_BFC0_416b_9F98_1E393942007B" seqno="7" style="DUID=C4409E69;"/>
+					<element geometry="Left=31;Top=381;Right=101;Bottom=416;" subject="EAID_3D19FA29_BF8E_452b_A9F5_3BFECDDCD83C" seqno="8" style="DUID=01416533;"/>
+					<element geometry="Left=31;Top=318;Right=101;Bottom=353;" subject="EAID_29FBCC01_3B25_4259_8C61_DB918343AF1A" seqno="9" style="DUID=32AB22A9;"/>
+					<element geometry="Left=95;Top=262;Right=135;Bottom=268;" subject="EAID_8C401D46_6C07_423c_A8BC_949EFE8FA954" seqno="10" style="DUID=978794E5;"/>
+					<element geometry="Left=77;Top=169;Right=147;Bottom=204;" subject="EAID_0FD1205A_9E28_488c_98C0_F6EA6A7FF0BE" seqno="11" style="DUID=0E04942E;"/>
+					<element geometry="Left=101;Top=70;Right=121;Bottom=90;" subject="EAID_58C586D2_17F1_44dc_BD8C_7F52F0188F41" seqno="12" style="DUID=25D0098F;LBL=CX=61:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:ALT=0:ROT=0;"/>
+					<element geometry="SX=13;SY=17;EX=7;EY=8;EDGE=2;$LLB=;LLT=;LMT=;LMB=CX=72:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_8B5CF826_7834_40a5_9600_125FE2FCB55E" style="Mode=3;EOID=A850C8DB;SOID=59EF6911;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_041CF1EE_95B3_4b85_AC62_9C97830156D4" style="Mode=3;EOID=A850C8DB;SOID=A4DEF662;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_51BAEC8B_6644_480d_9710_58F16C581291" style="Mode=3;EOID=A4DEF662;SOID=18EFB5E5;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_0DD710A2_2BEF_4002_AC1C_C386BF10AA7F" style="Mode=3;EOID=A4DEF662;SOID=467CE35C;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=CX=39:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_930F0324_A2FC_4a5a_A195_FAEFBEB49345" style="Mode=3;EOID=467CE35C;SOID=59EF6911;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=CX=36:CY=26:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_0F0A9204_71E6_486c_A648_7D6B30A7BA73" style="Mode=3;EOID=59EF6911;SOID=0E04942E;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=4;SY=-1;EX=1;EY=-1;EDGE=3;$LLB=;LLT=;LMT=;LMB=CX=33:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_74C68447_B3D5_4e35_9A59_2C2C7471DED7" style="Mode=3;EOID=978794E5;SOID=0E04942E;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_7C181669_2882_426a_B84C_DB812F171EB9" style="Mode=3;EOID=0E04942E;SOID=25D0098F;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_FBEB7E0A_34B0_435e_9CD9_280346B6C540" style="Mode=3;EOID=18EFB5E5;SOID=8219FCF9;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_94A9B539_E0DE_41d2_B741_30BF99983715" style="Mode=3;EOID=8219FCF9;SOID=978794E5;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_4C060EFA_7532_4d7a_B724_84C47C3C127C" style="Mode=3;EOID=18EFB5E5;SOID=C4409E69;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_146155E3_08F3_4bc6_9176_8F2C97C09550" style="Mode=3;EOID=C4409E69;SOID=01416533;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_6448E77A_2C94_4bd4_9CAA_76261C2183B2" style="Mode=3;EOID=01416533;SOID=32AB22A9;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_32D65D6A_238F_42c2_9E71_AEBB67E08C71" style="Mode=3;EOID=32AB22A9;SOID=978794E5;Color=-1;LWidth=0;Hidden=0;"/>
+				</elements>
+			</diagram>
+		</diagrams>
+	</xmi:Extension>
+</xmi:XMI>

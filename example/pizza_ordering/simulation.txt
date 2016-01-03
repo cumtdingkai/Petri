@@ -1,0 +1,5 @@
+problem.
+1. merge has 3 incomings, the 2 come from a parallel edges.
+2. if change order, it returns to the fork, but the parallel are not over.
+see:
+http://www.eclipse.org/atl/usecases/UML2AnyLogic/

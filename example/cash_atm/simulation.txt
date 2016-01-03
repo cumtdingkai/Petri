@@ -1,0 +1,6 @@
+right.
+the element after action dispense cash is a fork, although it has 2 incomings and 1 outgoing.
+if it is a join, it will cause problem in simulation,because, the 2 incomings can not at the same time pass.
+i suggest, instead of fork, we can use a merge here.
+
+http://www.conceptdraw.com/How-To-Guide/uml-activity-diagram

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<model n_steps="None" name="test_exp" version="3.0">
+    <element host="parallel1" initial="true" name="A"/>
+    <control_flow from="A" prob="0.3" to="B"/>
+    <control_flow from="A" prob="0.7" to="C"/>
+    <element host="parallel1" name="C"/>
+    <control_flow from="C" prob="1" to="D"/>
+    <element host="parallel1" name="B"/>
+    <control_flow from="B" prob="1" to="D"/>
+    <element host="parallel1" initial="true" name="E"/>
+    <control_flow from="E" prob="0.5" to="F"/>
+    <control_flow from="E" prob="0.5" to="G"/>
+    <element host="parallel1" name="D"/>
+    <element host="parallel1" name="G"/>
+    <control_flow from="G" prob="1" to="H"/>
+    <element name="parallel1"/>
+    <control_flow from="parallel1" prob="0.5" to="I"/>
+    <control_flow from="parallel1" prob="0.5" to="parallel1"/>
+    <element name="I"/>
+    <control_flow from="I" prob="1" to="node1"/>
+    <element host="parallel1" name="H"/>
+    <element host="parallel1" name="F"/>
+    <control_flow from="F" prob="1" to="H"/>
+    <element name="node1"/>
+    <element initial="true" name="node2"/>
+    <control_flow from="node2" prob="1" to="parallel1"/>
+    <subsystem name="parallel1" parallel="true"/>
+</model>

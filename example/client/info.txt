@@ -1,0 +1,47 @@
+[Info: the model has 1 activities ]
+[Info: the action name:Prompt To Continue id:_18_2_20f0116_1446125616190_657956_4435 has 2 outgoings ]
+[Info: the action name:Locate Requested Auto id:_18_2_20f0116_1446125461433_502054_4343 has 2 outgoings ]
+[Info: the action name:Find Client id:_18_2_20f0116_1446125437769_975337_4285 has 2 outgoings ]
+[Info: the action name:Find Reservation Request id:_18_2_20f0116_1446125454162_254218_4316 has 2 outgoings ]
+[Info: the Petri Net Diagram is created. name:client ]
+[Info: the type of the transformed Petri-Net is free_choice, it is neither state_machines nor marked_graphs. name:client ]
+[Info: the matrix of the Petri-Net, see below. name:client ]
+[[-1.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.
+   0.  0.]
+ [ 1. -1. -1.  0.  1.  0.  0.  0.  0.  0.  1.  0.  0.  0.  0.  0.  0.  0.
+   0.  0.]
+ [ 0.  1.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.
+   0.  0.]
+ [ 0.  0.  1. -1.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.
+   0.  0.]
+ [ 0.  0.  0.  1. -1. -1.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.
+   0.  0.]
+ [ 0.  0.  0.  0.  0.  1. -1.  0.  0.  0.  0.  1.  0.  0.  0.  0.  0.  0.
+   0.  0.]
+ [ 0.  0.  0.  0.  0.  0.  1. -1. -1.  0.  0.  0.  0.  0.  0.  0.  0.  0.
+   0.  0.]
+ [ 0.  0.  0.  0.  0.  0.  0.  1.  0. -1.  0.  0.  1.  0.  0.  0.  0.  0.
+   0.  0.]
+ [ 0.  0.  0.  0.  0.  0.  0.  0.  0.  1. -1. -1.  0.  0.  0.  0.  0.  0.
+   0.  0.]
+ [ 0.  0.  0.  0.  0.  0.  0.  0.  1.  0.  0.  0. -1. -1.  0.  0.  0.  0.
+   0.  0.]
+ [ 0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  1. -1.  0.  0.  0.
+   0.  0.]
+ [ 0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  1.  0. -1.  0.  0.
+   0.  0.]
+ [ 0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  1.  0. -1.  0.
+   0.  0.]
+ [ 0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  1.  0. -1.
+   0.  0.]
+ [ 0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  1.  0.
+  -1.  0.]
+ [ 0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  1.
+  -1.  0.]
+ [ 0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.
+   1. -1.]
+ [ 0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.
+   0.  1.]]
+[Info: the Petri Net Diagram is created. name:client ]
+[Info: the Reachability Diagram is created. name:client ]
+[Info: completed ]
