@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<model n_steps="None" name="flight_control" version="3.0">
+    <element name="ecg"/>
+    <control_flow from="ecg" prob="1" to="read_input"/>
+    <data_flow from="ecg" to="mtr_cmd"/>
+    <data_flow from="s_qref" to="ecg"/>
+    <data_flow from="s_zref" to="ecg"/>
+    <element name="attd_ctrl"/>
+    <control_flow from="attd_ctrl" prob="1" to="rate_ctrl"/>
+    <data_flow from="attd_ctrl" to="s_omegaref"/>
+    <data_flow from="error_quat" to="attd_ctrl"/>
+    <element name="read_input"/>
+    <control_flow from="read_input" prob="0.25" to="eul_to_quat"/>
+    <control_flow from="read_input" prob="0.25" to="err_quat"/>
+    <control_flow from="read_input" prob="0.5" to="rate_ctrl"/>
+    <data_flow from="read_input" to="az"/>
+    <data_flow from="read_input" to="euler_ref"/>
+    <data_flow from="read_input" to="quat_nav_sol"/>
+    <data_flow from="read_input" to="imu_data"/>
+    <element name="err_quat"/>
+    <control_flow from="err_quat" prob="1" to="attd_ctrl"/>
+    <data_flow from="err_quat" to="error_quat"/>
+    <data_flow from="quat_nav_sol" to="err_quat"/>
+    <data_flow from="quat_ref" to="err_quat"/>
+    <element initial="true" name="node1"/>
+    <control_flow from="node1" prob="1" to="read_input"/>
+    <element name="rate_ctrl"/>
+    <control_flow from="rate_ctrl" prob="1" to="ecg"/>
+    <data_flow from="rate_ctrl" to="s_qref"/>
+    <data_flow from="rate_ctrl" to="s_zref"/>
+    <data_flow from="az" to="rate_ctrl"/>
+    <data_flow from="imu_data" to="rate_ctrl"/>
+    <data_flow from="s_omegaref" to="rate_ctrl"/>
+    <element name="eul_to_quat"/>
+    <control_flow from="eul_to_quat" prob="1" to="err_quat"/>
+    <data_flow from="eul_to_quat" to="quat_ref"/>
+    <data_flow from="euler_ref" to="eul_to_quat"/>
+    <data name="quat_nav_sol"/>
+    <data name="s_omegaref"/>
+    <data name="mtr_cmd"/>
+    <data name="euler_ref"/>
+    <data name="quat_ref"/>
+    <data name="s_zref"/>
+    <data name="imu_data"/>
+    <data name="az"/>
+    <data name="s_qref"/>
+    <data name="error_quat"/>
+</model>

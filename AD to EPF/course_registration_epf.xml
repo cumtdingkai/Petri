@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<model n_steps="None" name="course_registration" version="3.0">
+    <element name="Client's_account_is_created"/>
+    <control_flow from="Client's_account_is_created" prob="1.0" to="System_sends_acknowledgement_to_client"/>
+    <element name="System_indicates_the_wrong_information"/>
+    <control_flow from="System_indicates_the_wrong_information" prob="1.0" to="Client_corrects_the_information"/>
+    <element name="Client_selects_the_&quot;submit&quot;_option"/>
+    <control_flow from="Client_selects_the_&quot;submit&quot;_option" prob="0.5" to="System_indicates_the_wrong_information"/>
+    <control_flow from="Client_selects_the_&quot;submit&quot;_option" prob="0.5" to="Client's_account_is_created"/>
+    <element name="Client_fills_in_the_registration_form"/>
+    <control_flow from="Client_fills_in_the_registration_form" prob="1.0" to="Client_selects_the_&quot;submit&quot;_option"/>
+    <element initial="true" name="node1"/>
+    <control_flow from="node1" prob="1.0" to="Client_fills_in_the_registration_form"/>
+    <element name="Client_corrects_the_information"/>
+    <control_flow from="Client_corrects_the_information" prob="1.0" to="Client_selects_the_&quot;submit&quot;_option"/>
+    <element name="node2"/>
+    <element name="System_sends_acknowledgement_to_client"/>
+    <control_flow from="System_sends_acknowledgement_to_client" prob="1.0" to="node2"/>
+</model>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<model n_steps="None" name="decision_activity" version="3.0">
+    <element initial="true" name="ActivityInitial"/>
+    <control_flow from="ActivityInitial" prob="0.166666666667" to="MSMQ"/>
+    <control_flow from="ActivityInitial" prob="0.166666666667" to="TCP"/>
+    <control_flow from="ActivityInitial" prob="0.166666666667" to="Named_Pipes"/>
+    <control_flow from="ActivityInitial" prob="0.166666666667" to="WS"/>
+    <control_flow from="ActivityInitial" prob="0.166666666667" to="Basic"/>
+    <control_flow from="ActivityInitial" prob="0.166666666667" to="MSMQ_Integration"/>
+    <element name="MSMQ"/>
+    <control_flow from="MSMQ" prob="1.0" to="ActivityFinal"/>
+    <element name="MSMQ_Integration"/>
+    <control_flow from="MSMQ_Integration" prob="1.0" to="ActivityFinal"/>
+    <element name="TCP"/>
+    <control_flow from="TCP" prob="1.0" to="ActivityFinal"/>
+    <element name="Named_Pipes"/>
+    <control_flow from="Named_Pipes" prob="1.0" to="ActivityFinal"/>
+    <element name="WS"/>
+    <control_flow from="WS" prob="1.0" to="ActivityFinal"/>
+    <element name="Basic"/>
+    <control_flow from="Basic" prob="1.0" to="ActivityFinal"/>
+    <element name="ActivityFinal"/>
+</model>

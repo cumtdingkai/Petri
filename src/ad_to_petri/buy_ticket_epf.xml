@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<model n_steps="None" name="buy_ticket" version="3.0">
+    <element name="Show_update"/>
+    <control_flow from="Show_update" prob="1" to="Check_credit_card"/>
+    <data_flow from="Show_update" to="UserData"/>
+    <element name="Submit_number_of_seats"/>
+    <control_flow from="Submit_number_of_seats" prob="0.5" to="Submit_number_of_seats"/>
+    <control_flow from="Submit_number_of_seats" prob="0.5" to="Check_credit_card"/>
+    <data_flow from="Performance" to="Submit_number_of_seats"/>
+    <element name="final2"/>
+    <element name="Book_seats"/>
+    <control_flow from="Book_seats" prob="1" to="Charge_credit_card"/>
+    <data_flow from="Book_seats" to="Ticket"/>
+    <element initial="true" name="initial"/>
+    <control_flow from="initial" prob="1" to="Submit_number_of_seats"/>
+    <element name="Check_credit_card"/>
+    <control_flow from="Check_credit_card" prob="0.5" to="Show_update"/>
+    <control_flow from="Check_credit_card" prob="0.5" to="Show_credit_card_info"/>
+    <data_flow from="UserData" to="Check_credit_card"/>
+    <element name="Show_reservation_number"/>
+    <control_flow from="Show_reservation_number" prob="1" to="final2"/>
+    <data_flow from="Ticket" to="Show_reservation_number"/>
+    <element name="Show_credit_card_info"/>
+    <control_flow from="Show_credit_card_info" prob="0.5" to="Show_update"/>
+    <control_flow from="Show_credit_card_info" prob="0.5" to="Show_reservation"/>
+    <element name="final1"/>
+    <element name="Show_reservation"/>
+    <control_flow from="Show_reservation" prob="0.5" to="final1"/>
+    <control_flow from="Show_reservation" prob="0.5" to="Book_seats"/>
+    <element name="Charge_credit_card"/>
+    <control_flow from="Charge_credit_card" prob="1" to="Show_reservation_number"/>
+    <data name="Performance"/>
+    <data name="Ticket"/>
+    <data name="UserData"/>
+</model>

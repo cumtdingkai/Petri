@@ -1,0 +1,64 @@
+arc                                done
+incomings outgoings                done
+gethub                             done
+label s1,s2....t1,t2,  verbessern  done
+just one t enabled                 done
+erreichbardiagram                  done
+next market platz                  done
+object node                        done
+guard                              done
+comments in parser                 done
+p10,p1 sorted                      done
+show 2 pt net diagram              done
+pin,pout                           done
+mit one target                     done
+no initnode                        done
+see the rg of flow  if finalnode return   done
+time -- tags					   done
+class diagram    --structur        done
+action 2 incoming                  done
+action 2 outgoings                 done
+type of pt                         done
+class definieren,comments with xml done
+pt mit class incoming, outgoing    done
+state mit incouming outgoing       done
+activity,node with behavior        done
+action -- call behavoir action     done
+classen diagram                    done
+the name of parameter, fun    -->   a_b_c  done
+t,p invarianz                      done
+verify lebenlaufig， tote t, tote p                done
+verify fun together. for .. in nodes  many times    done
+paralle conflikt                                    done
+TODO pin,pinout incoming,outgoing the num           done
+tokens                                              done
+comments for tokens                                 done
+action has 2 incoming, 1 control,data               done
+algorithm,struct, comments                          done
+self loop                          done
+zusammenfassung                    done
+simulator                          done
+EA to Magic                        done
+EA activity,time   parsing from elements            done
+unittest                           done
+pylint                             done
+multi edge                         done
+incoming outgoing mit object node  done
+object node in EA                  done
+s,t mit label Name see temp        done
+see the result von payOrder ....the marked place    done
+snacks  -- petri net               done 
+pin with host                      done
+name                               done
+a big AD to test                   done
+object node has the same name      done
+pin pout has same name             done
+prism java32                       done
+xml parse for "const","exp" EA
+exp und immediate
+time_label in petri net
+decision,time
+more than one pin,pout             
+unit test
+probs in label sort
+black B
