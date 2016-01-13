@@ -1,0 +1,6 @@
+Title:    Transformation of UML Activity Diagram to Dual-Graph Error Propagation Model
+Abstract: 1/2 page (Andrey)
+Introduction Andrey
+Methode Description 
+
+latex algorithmic
